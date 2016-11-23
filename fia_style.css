@@ -32,7 +32,7 @@ th{
 
 .info{
 	position: absolute;
-	background: #e6e6e6 url(../img/info.svg) no-repeat;
+	background: #e6e6e6 url(info.svg) no-repeat;
 	display: block;
 	top: 37px;
 	right: 0px;
@@ -47,7 +47,7 @@ th{
 
 .info.opened{
 	padding-bottom: 16px;
-	background: #e6e6e6 url(../img/close_info.svg) no-repeat center top;
+	background: #e6e6e6 url(close_info.svg) no-repeat center top;
 }
 
 #list_content{
