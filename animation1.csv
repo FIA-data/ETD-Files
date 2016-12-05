@@ -1,0 +1,345 @@
+Exchange_Name,FIA_Region,Report_Year,Open_Interest,Volume,Ratio
+ASX 24,Asia,1997,5000,2320,1.00
+ASX 24,Asia,1998,5000,11412,2.00
+ASX 24,Asia,1999,5000,8203,4.00
+ASX 24,Asia,2000,5000,2318,3
+ASX 24,Asia,2001,5000,346,5.00
+ASX 24,Asia,2002,5000,1151,6.00
+ASX 24,Asia,2003,5000,12850,7.00
+ASX 24,Asia,2004,5000,13486,8.00
+ASX 24,Asia,2005,5000,19779,9.00
+ASX 24,Asia,2006,5000,48916,10.00
+ASX 24,Asia,2007,5000,127491,1.00
+ASX 24,Asia,2008,5000,99346,2.00
+ASX 24,Asia,2009,5000,120594,4.00
+ASX 24,Asia,2010,5000,181147,3
+ASX 24,Asia,2011,5000,204276,5.00
+ASX 24,Asia,2012,5000,151861,6.00
+ASX 24,Asia,2013,451077,137969,7.00
+ASX 24,Asia,2014,578806,207367,8.00
+ASX 24,Asia,2015,675891,199251,9.00
+ASX 24,Asia,2016,457793,143265,10.00
+Bolsa de Mercadorias & Futuros,Latin America,2000,6000,53963,1.00
+Bolsa de Mercadorias & Futuros,Latin America,2001,6000,67527,2.00
+Bolsa de Mercadorias & Futuros,Latin America,2002,6000,62896,4.00
+Bolsa de Mercadorias & Futuros,Latin America,2003,6000,101734,3
+Bolsa de Mercadorias & Futuros,Latin America,2004,6000,40553,5.00
+Bolsa de Mercadorias & Futuros,Latin America,2005,6000,25466,6.00
+Bolsa de Mercadorias & Futuros,Latin America,2006,6000,26426,7.00
+Bolsa de Mercadorias & Futuros,Latin America,2007,6000,3942,8.00
+Bolsa de Mercadorias & Futuros,Latin America,2010,6000,1305,9.00
+Bolsa de Mercadorias & Futuros,Latin America,2011,6000,9556,10.00
+Bolsa de Mercadorias & Futuros,Latin America,2012,6000,3094,1.00
+Bolsa de Mercadorias & Futuros,Latin America,2013,1384,3561,2.00
+Bolsa de Mercadorias & Futuros,Latin America,2014,1111,4038,4.00
+Bolsa de Mercadorias & Futuros,Latin America,2015,1474,7519,3
+Bolsa de Mercadorias & Futuros,Latin America,2016,4778,13744,5.00
+Borsa Istanbul,Other,2011,7000,32,6.00
+Borsa Istanbul,Other,2012,58,928,7.00
+Borsa Istanbul,Other,2013,86,152,8.00
+Borsa Istanbul,Other,2014,9,26,9.00
+Borsa Istanbul,Other,2015,10009,23647,10.00
+Borsa Istanbul,Other,2016,64399,191305,1.00
+Borsa Italiana,Europe,2008,7865,634,2.00
+Borsa Italiana,Europe,2009,7865,5188,4.00
+Borsa Italiana,Europe,2010,7865,5947,3
+Borsa Italiana,Europe,2011,7865,3575,5.00
+Borsa Italiana,Europe,2012,7865,1239219,6.00
+Borsa Italiana,Europe,2013,27091,9169,7.00
+Borsa Italiana,Europe,2014,52638,7544,8.00
+Borsa Italiana,Europe,2015,12134,2811,9.00
+Borsa Italiana,Europe,2016,5907,2315,10.00
+Central Japan Commodity Exchange,Asia,2000,6000,19762511,1.00
+Central Japan Commodity Exchange,Asia,2001,6000,26739073,2.00
+Central Japan Commodity Exchange,Asia,2002,6000,29550868,4.00
+Central Japan Commodity Exchange,Asia,2003,6000,30690378,3
+Central Japan Commodity Exchange,Asia,2004,6000,32381114,5.00
+Central Japan Commodity Exchange,Asia,2005,6000,21799959,6.00
+Central Japan Commodity Exchange,Asia,2006,6000,8989242,7.00
+Central Japan Commodity Exchange,Asia,2007,6000,6329426,8.00
+Central Japan Commodity Exchange,Asia,2008,6000,3185378,9.00
+Central Japan Commodity Exchange,Asia,2009,6000,1701600,10.00
+Central Japan Commodity Exchange,Asia,2010,6000,647010,1.00
+Chicago Board of Trade,North America,1998,6000,272,2.00
+Chicago Board of Trade,North America,1999,6000,22,4.00
+Chicago Board of Trade,North America,2005,6000,2676,3
+Chicago Board of Trade,North America,2006,6000,5666,5.00
+Chicago Board of Trade,North America,2007,6000,79293,6.00
+Chicago Board of Trade,North America,2008,6000,321330,7.00
+Chicago Board of Trade,North America,2009,6000,347122,8.00
+Chicago Board of Trade,North America,2010,6000,822808,9.00
+Chicago Board of Trade,North America,2011,6000,884625,10.00
+Chicago Board of Trade,North America,2012,6000,688056,1.00
+Chicago Board of Trade,North America,2013,168725,343170,2.00
+Chicago Board of Trade,North America,2014,94644,259317,4.00
+Chicago Board of Trade,North America,2015,75693,196990,3
+Chicago Board of Trade,North America,2016,42506,133716,5.00
+Chicago Climate Futures Exchange,North America,2008,42506,483438,6.00
+Chicago Climate Futures Exchange,North America,2009,42506,1372995,7.00
+Chicago Climate Futures Exchange,North America,2010,42506,441601,8.00
+Chicago Climate Futures Exchange,North America,2011,42506,84580,9.00
+Chicago Climate Futures Exchange,North America,2012,42506,21658,10.00
+Chicago Mercantile Exchange,North America,2005,42506,4,1.00
+Dalian Commodity Exchange,Asia,2013,2896415,149566187,2.00
+Dalian Commodity Exchange,Asia,2014,3524896,121293730,4.00
+Dalian Commodity Exchange,Asia,2015,1806781,31368889,3
+Dalian Commodity Exchange,Asia,2016,2078694,68851912,5.00
+Dubai Gold & Commodities Exchange,Asia,2013,782,19717,6.00
+Dubai Gold & Commodities Exchange,Asia,2014,1023,24317,7.00
+Dubai Gold & Commodities Exchange,Asia,2015,2119,53162,8.00
+Dubai Gold & Commodities Exchange,Asia,2016,4496,139319,9.00
+Dubai Mercantile Exchange,Asia,2007,4496,223174,10.00
+Dubai Mercantile Exchange,Asia,2008,4496,330379,1.00
+Dubai Mercantile Exchange,Asia,2009,4496,553888,2.00
+Dubai Mercantile Exchange,Asia,2010,4496,744727,4.00
+Dubai Mercantile Exchange,Asia,2011,4496,883359,3
+Dubai Mercantile Exchange,Asia,2012,4496,1176056,5.00
+Dubai Mercantile Exchange,Asia,2013,226294,1600918,6.00
+Dubai Mercantile Exchange,Asia,2014,204648,2119936,7.00
+Dubai Mercantile Exchange,Asia,2015,239141,1709888,8.00
+Dubai Mercantile Exchange,Asia,2016,223497,1512812,9.00
+Eurex,Europe,2008,223497,80084,10.00
+Eurex,Europe,2009,223497,23642,1.00
+Eurex,Europe,2010,223497,127197,2.00
+Eurex,Europe,2011,223497,81048,4.00
+Eurex,Europe,2012,223497,143391,3
+Eurex,Europe,2013,710546,91765,5.00
+Eurex,Europe,2014,844787,35651,6.00
+ICE Futures Europe,Europe,2005,844787,42055085,7.00
+ICE Futures Europe,Europe,2006,844787,92721050,8.00
+ICE Futures Europe,Europe,2007,844787,138470956,9.00
+ICE Futures Europe,Europe,2008,844787,152950133,10.00
+ICE Futures Europe,Europe,2009,844787,165693531,1.00
+ICE Futures Europe,Europe,2010,844787,217120773,2.00
+ICE Futures Europe,Europe,2011,844787,269003783,4.00
+ICE Futures Europe,Europe,2012,844787,282120115,3
+ICE Futures Europe,Europe,2013,119816566,320300499,5.00
+ICE Futures Europe,Europe,2014,130857731,321448349,6.00
+ICE Futures Europe,Europe,2015,163438624,375278040,7.00
+ICE Futures Europe,Europe,2016,122252051,312010578,8.00
+ICE Futures Singapore,Asia,2015,11155,167046,9.00
+ICE Futures Singapore,Asia,2016,56852,1128123,10.00
+ICE Futures U.S.,North America,2012,56852,84290883,1.00
+ICE Futures U.S.,North America,2013,428741508,324470071,2.00
+ICE Futures U.S.,North America,2014,340237305,247539822,4.00
+ICE Futures U.S.,North America,2015,305847725,235029551,3
+ICE Futures U.S.,North America,2016,217043923,164124662,5.00
+International Petroleum Exchange,Europe,1994,8092,14534403,6.00
+International Petroleum Exchange,Europe,1995,8092,14955371,7.00
+International Petroleum Exchange,Europe,1996,8092,15520910,8.00
+International Petroleum Exchange,Europe,1997,8092,14733342,9.00
+International Petroleum Exchange,Europe,1998,8092,19661558,10.00
+International Petroleum Exchange,Europe,1999,8092,23042833,1.00
+International Petroleum Exchange,Europe,2000,8092,25489438,2.00
+International Petroleum Exchange,Europe,2001,8092,26410664,4.00
+International Petroleum Exchange,Europe,2002,8092,30441264,3
+International Petroleum Exchange,Europe,2003,8092,33341244,5.00
+International Petroleum Exchange,Europe,2004,8092,35540783,6.00
+JSE Securities Exchange,Other,2009,8092,742,7.00
+JSE Securities Exchange,Other,2010,8092,3002,8.00
+JSE Securities Exchange,Other,2011,8092,25615,9.00
+JSE Securities Exchange,Other,2012,8092,33077,10.00
+JSE Securities Exchange,Other,2013,8092,18588,1.00
+JSE Securities Exchange,Other,2014,20272,20754,2.00
+JSE Securities Exchange,Other,2015,59032,104060,4.00
+JSE Securities Exchange,Other,2016,46704,110333,3
+Kansas City Board of Trade,North America,1995,46704,80141,5.00
+Kansas City Board of Trade,North America,1996,46704,91556,6.00
+Kansas City Board of Trade,North America,1997,46704,86963,7.00
+Kansas City Board of Trade,North America,1998,46704,77405,8.00
+Kansas City Board of Trade,North America,1999,46704,18385,9.00
+Kansas City Board of Trade,North America,2000,46704,1,10.00
+Minneapolis Grain Exchange,North America,1998,46704,54,1.00
+Minneapolis Grain Exchange,North America,1999,46704,250,2.00
+Minneapolis Grain Exchange,North America,2000,46704,205,4.00
+Montreal Exchange,North America,2010,46704,4,3
+Montreal Exchange,North America,2014,46704,4,5.00
+Moscow Exchange,Europe,2007,46704,362252,6.00
+Moscow Exchange,Europe,2008,46704,856705,7.00
+Moscow Exchange,Europe,2009,46704,7499735,8.00
+Moscow Exchange,Europe,2010,46704,11540673,9.00
+Moscow Exchange,Europe,2011,46704,19754755,10.00
+Moscow Exchange,Europe,2012,46704,12222538,1.00
+Moscow Exchange,Europe,2013,361499,18208714,2.00
+Moscow Exchange,Europe,2014,334640,7131944,4.00
+Moscow Exchange,Europe,2015,2953632,111543331,3
+Moscow Exchange,Europe,2016,7812204,302753771,5.00
+Multi Commodity Exchange of India,Asia,2005,5000,5217833,6.00
+Multi Commodity Exchange of India,Asia,2006,5000,6584572,7.00
+Multi Commodity Exchange of India,Asia,2007,5000,15671922,8.00
+Multi Commodity Exchange of India,Asia,2008,5000,21300311,9.00
+Multi Commodity Exchange of India,Asia,2009,5000,52331712,10.00
+Multi Commodity Exchange of India,Asia,2010,5000,52717713,1.00
+Multi Commodity Exchange of India,Asia,2011,5000,64638423,2.00
+Multi Commodity Exchange of India,Asia,2012,5000,85807441,4.00
+Multi Commodity Exchange of India,Asia,2013,691914,63444751,3
+Multi Commodity Exchange of India,Asia,2014,293587,36361020,5.00
+Multi Commodity Exchange of India,Asia,2015,853510,107586332,6.00
+Multi Commodity Exchange of India,Asia,2016,667977,108504315,7.00
+Nasdaq Commodities,Europe,2013,1398410,848765,8.00
+Nasdaq Commodities,Europe,2014,3534542,1447146,9.00
+Nasdaq Commodities,Europe,2015,5981701,2281077,10.00
+Nasdaq Commodities,Europe,2016,5104893,2212321,1.00
+Nasdaq NFX,North America,2015,1217563,3523298,2.00
+Nasdaq NFX,North America,2016,6727142,21251450,4.00
+Nasdaq OMX Commodities,Europe,2009,1499,906096,3
+Nasdaq OMX Commodities,Europe,2010,1499,1004194,5.00
+Nasdaq OMX Commodities,Europe,2011,1499,858484,6.00
+Nasdaq OMX Commodities,Europe,2012,1499,880917,7.00
+National Commodity & Derivatives Exchange,Asia,2005,1499,132023,8.00
+National Commodity & Derivatives Exchange,Asia,2006,1499,140092,9.00
+National Commodity & Derivatives Exchange,Asia,2007,1499,162689,10.00
+National Commodity & Derivatives Exchange,Asia,2008,1499,297650,1.00
+National Commodity & Derivatives Exchange,Asia,2009,1499,402056,2.00
+National Commodity & Derivatives Exchange,Asia,2010,1499,2277100,4.00
+National Commodity & Derivatives Exchange,Asia,2011,1499,4227438,3
+National Commodity & Derivatives Exchange,Asia,2012,1499,831012,5.00
+National Commodity & Derivatives Exchange,Asia,2013,1499,63874,6.00
+National Commodity & Derivatives Exchange,Asia,2014,446,9433,7.00
+New York Board of Trade,North America,2004,341361039,1381,8.00
+New York Mercantile Exchange,North America,1993,341361039,54584872,9.00
+New York Mercantile Exchange,North America,1994,341361039,57142180,10.00
+New York Mercantile Exchange,North America,1995,341361039,53593396,1.00
+New York Mercantile Exchange,North America,1996,341361039,55451721,2.00
+New York Mercantile Exchange,North America,1997,341361039,63002464,4.00
+New York Mercantile Exchange,North America,1998,341361039,75809293,3
+New York Mercantile Exchange,North America,1999,341361039,88536120,5.00
+New York Mercantile Exchange,North America,2000,341361039,88342574,6.00
+New York Mercantile Exchange,North America,2001,341361039,88023496,7.00
+New York Mercantile Exchange,North America,2002,341361039,115931412,8.00
+New York Mercantile Exchange,North America,2003,341361039,112512530,9.00
+New York Mercantile Exchange,North America,2004,341361039,133459127,10.00
+New York Mercantile Exchange,North America,2005,341361039,174339028,1.00
+New York Mercantile Exchange,North America,2006,341361039,245328192,2.00
+New York Mercantile Exchange,North America,2007,341361039,311964829,4.00
+New York Mercantile Exchange,North America,2008,341361039,364155274,3
+New York Mercantile Exchange,North America,2009,341361039,375939006,5.00
+New York Mercantile Exchange,North America,2010,341361039,420583979,6.00
+New York Mercantile Exchange,North America,2011,341361039,447303404,7.00
+New York Mercantile Exchange,North America,2012,341361039,427482381,8.00
+New York Mercantile Exchange,North America,2013,341361039,421926643,9.00
+New York Mercantile Exchange,North America,2014,294411013,410449448,10.00
+New York Mercantile Exchange,North America,2015,333946149,498062018,1.00
+New York Mercantile Exchange,North America,2016,251767619,449747306,2.00
+New Zealand Futures Exchange,Asia,1996,251767619,86159,4.00
+New Zealand Futures Exchange,Asia,1997,251767619,4596,3
+New Zealand Futures Exchange,Asia,1998,251767619,2863,5.00
+New Zealand Futures Exchange,Asia,1999,251767619,1564,6.00
+New Zealand Futures Exchange,Asia,2000,251767619,450,7.00
+New Zealand Futures Exchange,Asia,2001,251767619,150,8.00
+New Zealand Futures Exchange,Asia,2009,251767619,58,9.00
+New Zealand Futures Exchange,Asia,2010,251767619,467,10.00
+New Zealand Futures Exchange,Asia,2011,251767619,1353,1.00
+New Zealand Futures Exchange,Asia,2012,251767619,7207,2.00
+New Zealand Futures Exchange,Asia,2013,2,6981,4.00
+New Zealand Futures Exchange,Asia,2014,3125,10455,3
+New Zealand Futures Exchange,Asia,2015,73307,27702,5.00
+New Zealand Futures Exchange,Asia,2016,187780,91983,6.00
+Nord Pool,Europe,2008,187780,1114850,7.00
+North American Derivative Exchange,North America,2010,187780,3167,8.00
+North American Derivative Exchange,North America,2011,187780,51384,9.00
+North American Derivative Exchange,North America,2012,187780,81995,10.00
+North American Derivative Exchange,North America,2013,187780,127040,1.00
+North American Derivative Exchange,North America,2014,187780,202671,2.00
+North American Derivative Exchange,North America,2015,187780,264493,4.00
+North American Derivative Exchange,North America,2016,187780,189302,3
+NYSE Amex,North America,2016,187780,3,5.00
+OCC,North America,2016,1,3,6.00
+Pakistan Mercantile Exchange,Asia,2013,64438,2227601,7.00
+Pakistan Mercantile Exchange,Asia,2014,58519,2348971,8.00
+Pakistan Mercantile Exchange,Asia,2015,48013,2539649,9.00
+Pakistan Mercantile Exchange,Asia,2016,33416,1130093,10.00
+Rosario Futures Exchange,Latin America,2011,5000,9928,1.00
+Rosario Futures Exchange,Latin America,2012,5000,22664,2.00
+Rosario Futures Exchange,Latin America,2013,8701,18198,4.00
+Rosario Futures Exchange,Latin America,2014,26529,34168,3
+Rosario Futures Exchange,Latin America,2015,46887,33244,5.00
+Rosario Futures Exchange,Latin America,2016,36207,121564,6.00
+SGX Asiaclear,Asia,2009,5000,8835,7.00
+SGX Asiaclear,Asia,2010,5000,38589,8.00
+SGX Asiaclear,Asia,2011,5000,10037,9.00
+SGX Asiaclear,Asia,2012,5000,19437,10.00
+SGX Asiaclear,Asia,2013,33216,27500,1.00
+SGX Asiaclear,Asia,2014,114148,93855,2.00
+SGX Asiaclear,Asia,2015,63651,48393,4.00
+SGX Asiaclear,Asia,2016,23627,15106,3
+Shanghai Futures Exchange,Asia,2004,5000,2818855,5.00
+Shanghai Futures Exchange,Asia,2005,5000,9809550,6.00
+Shanghai Futures Exchange,Asia,2006,5000,11492313,7.00
+Shanghai Futures Exchange,Asia,2007,5000,12005094,8.00
+Shanghai Futures Exchange,Asia,2008,5000,30810540,9.00
+Shanghai Futures Exchange,Asia,2009,5000,45753969,10.00
+Shanghai Futures Exchange,Asia,2010,5000,10682204,1.00
+Shanghai Futures Exchange,Asia,2011,5000,1971141,2.00
+Shanghai Futures Exchange,Asia,2012,5000,9132,4.00
+Shanghai Futures Exchange,Asia,2013,70690,3135340,3
+Shanghai Futures Exchange,Asia,2014,100084,651638,5.00
+Shanghai Futures Exchange,Asia,2015,424681,32401698,6.00
+Shanghai Futures Exchange,Asia,2016,4394986,142796227,7.00
+Singapore Exchange,Asia,2010,5000,6490,8.00
+Singapore Exchange,Asia,2011,5000,1746,9.00
+Singapore International Monetary Exchange,Asia,1994,5000,171896,10.00
+Singapore International Monetary Exchange,Asia,1995,5000,92866,1.00
+Singapore International Monetary Exchange,Asia,1996,5000,63577,2.00
+Singapore International Monetary Exchange,Asia,1997,5000,34833,4.00
+Singapore International Monetary Exchange,Asia,1998,5000,32600,3
+Singapore International Monetary Exchange,Asia,1999,5000,18853,5.00
+Singapore International Monetary Exchange,Asia,2000,5000,3980,6.00
+Singapore International Monetary Exchange,Asia,2001,5000,50,7.00
+Singapore International Monetary Exchange,Asia,2002,5000,1282,8.00
+Singapore International Monetary Exchange,Asia,2003,5000,2590,9.00
+Singapore Mercantile Exchange,Asia,2010,5000,2090,10.00
+Singapore Mercantile Exchange,Asia,2011,5000,25723,1.00
+Singapore Mercantile Exchange,Asia,2012,5000,3429,2.00
+Thailand Futures Exchange,Asia,2011,5000,3320,4.00
+Thailand Futures Exchange,Asia,2012,5000,147823,3
+Thailand Futures Exchange,Asia,2013,5381,46496,5.00
+Thailand Futures Exchange,Asia,2014,4921,32530,6.00
+Thailand Futures Exchange,Asia,2015,5057,25970,7.00
+Thailand Futures Exchange,Asia,2016,2982,19076,8.00
+Tokyo Commodity Exchange,Asia,1999,5000,5414831,9.00
+Tokyo Commodity Exchange,Asia,2000,5000,21111439,10.00
+Tokyo Commodity Exchange,Asia,2001,5000,25654212,1.00
+Tokyo Commodity Exchange,Asia,2002,5000,33385885,2.00
+Tokyo Commodity Exchange,Asia,2003,5000,41068117,4.00
+Tokyo Commodity Exchange,Asia,2004,5000,39205280,3
+Tokyo Commodity Exchange,Asia,2005,5000,26732003,5.00
+Tokyo Commodity Exchange,Asia,2006,5000,19386944,6.00
+Tokyo Commodity Exchange,Asia,2007,5000,11369543,7.00
+Tokyo Commodity Exchange,Asia,2008,5000,6129295,8.00
+Tokyo Commodity Exchange,Asia,2009,5000,4383212,9.00
+Tokyo Commodity Exchange,Asia,2010,5000,4665935,10.00
+Tokyo Commodity Exchange,Asia,2011,5000,4789225,1.00
+Tokyo Commodity Exchange,Asia,2012,5000,4532168,2.00
+Tokyo Commodity Exchange,Asia,2013,780046,4402511,4.00
+Tokyo Commodity Exchange,Asia,2014,612239,3489531,3
+Tokyo Commodity Exchange,Asia,2015,883928,5778780,5.00
+Tokyo Commodity Exchange,Asia,2016,959395,5565931,6.00
+Zhengzhou Commodity Exchange,Asia,2013,141702,4357384,7.00
+Zhengzhou Commodity Exchange,Asia,2014,496623,5646295,8.00
+Zhengzhou Commodity Exchange,Asia,2015,254625,2652047,9.00
+Zhengzhou Commodity Exchange,Asia,2016,1026627,34859715,10.00
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
