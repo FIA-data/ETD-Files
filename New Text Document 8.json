@@ -125,13 +125,7 @@
    "Volume":[[1995,80141],[1996,91556],[1997,86963],[1998,77405],[1999,18385],[2000,1]],
    "Ratio":[[1995,5],[1996,6],[1997,7],[1998,8],[1999,9],[2000,10]]
 },
-{
-   "Exchange_Name":"Minneapolis Grain Exchange",
-   "FIA_Region":"North America",
-   "Open_Interest":[[1998,46704],[1999,46704],[2000,46704]],
-   "Volume":[[1998,54],[1999,250],[2000,205]],
-   "Ratio":[[1998,1],[1999,2],[2000,4]]
-},
+
 {
    "Exchange_Name":"Montreal Exchange",
    "FIA_Region":"North America",
