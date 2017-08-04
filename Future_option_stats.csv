@@ -1,3 +1,3 @@
-Instrument_Type,Volume,Open_Interest,Volume_M/M_Change,Volume_Y/Y_Change,Open_Interest_M/M_Change,Open_Interest_Y/Y_Change
+Instrument_Type,Volume,Open_Interest,Volume_M_Change,Volume_Y_Change,Open_Interest_M_Change,Open_Interest_Y_Change
 Future,10000000,500000,35%,-10%,23%,2%
 Option,1000000,50000,20%,11%,-12%,86%
