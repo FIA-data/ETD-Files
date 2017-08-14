@@ -1,16 +1,16 @@
 source,target,value
-ICAP Global Deriviates Limited,CME,19930000000 
-ICAP Global Deriviates Limited,LCH, 447482002601  
-ICAP SEF (US) LLC,ASX,36974234741
-ICAP SEF (US) LLC,CME,32370614342
-ICAP SEF (US) LLC,ICE Clear Credit,1000000000
-ICAP SEF (US) LLC,JSCC,18983555110
-ICAP SEF (US) LLC,LCH,3073252245456 
-Tradition SEF Inc.,CME,34162871870
-Tradition SEF Inc.,ICE Clear Credit,2322000000
-Tradition SEF Inc.,LCH,314973767158 
-trueEX LLC,CME,12334541598 
-trueEX LLC,LCH,515333894230 
+ICAP Global Deriviates Limited,CME,1
+ICAP Global Deriviates Limited,LCH, 4  
+ICAP SEF (US) LLC,ASX,3
+ICAP SEF (US) LLC,CME,3
+ICAP SEF (US) LLC,ICE Clear Credit,1
+ICAP SEF (US) LLC,JSCC,1
+ICAP SEF (US) LLC,LCH,3
+Tradition SEF Inc.,CME,3
+Tradition SEF Inc.,ICE Clear Credit,2
+Tradition SEF Inc.,LCH,3 
+trueEX LLC,CME,1 
+trueEX LLC,LCH,5 
 
 
 
