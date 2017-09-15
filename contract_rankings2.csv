@@ -1,6 +1,6 @@
 Standardized_Contract,Contract_Type,Group_Name,Exchange_Name,Country,Region,Parent_Name,Volume,Volume_M_Change,Volume_Y_Change,Open_Interest,Open_Interest_M_Change,Open_Interest_Y_Change
 1% Fuel Oil Cargoes CIF MED (Platts) (1W),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,-100.00%,16.00,-20.00%,-98.46%
-1% Fuel Oil Rotterdam (Platts) vs. 1% Fuel Oil NWE (Platts) (33),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,,60.00,-16.67%,-50.82%
+1% Fuel Oil Rotterdam (Platts) vs. 1% Fuel Oil NWE (Platts)Â (33),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,,60.00,-16.67%,-50.82%
 3 Month Euribor,Option,Interest Rates,Eurex,Germany,Europe,Eurex,0.00,-100.00%,-100.00%,418.00,0.00%,-99.57%
 3 Month Euribor 4 Year Mid Curve,Option,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,0.00,,,2500.00,-28.57%,
 1% Fuel Oil Cargoes FOB NWE (Platts) vs. 3.5% Fuel Oil Barges FOB Rotterdam (Platts) (FS),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,170.00,-42.37%,97.67%,1077.00,-4.10%,-0.09%
@@ -44,7 +44,7 @@ Beef,Future,Agriculture,JSE Securities Exchange,South Africa,Other,JSE Securitie
 3 Year Standards,Future,Interest Rates,Eris Exchange,United States,North America,Eris Exchange,2099.00,170.14%,,3278.00,9.93%,306.20%
 3 Year Treasury Bond,Future,Interest Rates,ASX 24,Australia,Asia,ASX,3253620.00,-30.04%,21.11%,1125441.00,14.49%,27.33%
 3 Year Treasury Bond,Future,Interest Rates,Korea Exchange,South Korea,Asia,Korea Exchange,1687514.00,15.80%,24.29%,209319.00,2.87%,-32.74%
-Bel 20 (€10),Option,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,0.00,,-100.00%,6.00,0.00%,-45.45%
+Bel 20 (â‚¬10),Option,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,0.00,,-100.00%,6.00,0.00%,-45.45%
 3 Year Treasury Bond Intra-Day,Option,Interest Rates,ASX 24,Australia,Asia,ASX,45933.00,-8.57%,14.95%,0.00,,
 3 Year Treasury Bond Overnight,Option,Interest Rates,ASX 24,Australia,Asia,ASX,29450.00,1.73%,5.81%,0.00,,
 3.5% Fuel Oil Barges FOB Rotterdam (Platts) Crack Spread (1000 MT) (BOB),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,862.00,-22.55%,-49.11%,4694.00,-6.79%,0.54%
@@ -244,7 +244,7 @@ Cotton (TT),Future,Agriculture,New York Mercantile Exchange,United States,North 
 AUD/USD,Future,Currencies,Moscow Exchange,Russia,Europe,Moscow Exchange,37200.00,-18.45%,-50.58%,18976.00,18.33%,35.39%
 AUD/USD,Future,Currencies,Singapore Exchange,Singapore,Asia,Singapore Exchange,2.00,,,0.00,,
 AUD/USD,Option,Currencies,North American Derivative Exchange,United States,North America,North American Derivative Exchange,84108.00,18.06%,-5.24%,,,
-AUD/USD Premium Quoted (European Style) – 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,146276.00,-27.68%,29391.13%,89306.00,2.96%,17905.24%
+AUD/USD Premium Quoted (European Style) â€“ 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,146276.00,-27.68%,29391.13%,89306.00,2.96%,17905.24%
 CZK/HUF,Future,Currencies,Budapest Stock Exchange,Hungary,Europe,CEE Stock Exchange Group,0.00,-100.00%,,10.00,0.00%,
 Australian Coking Coal (Platts) Low Vol (ALW),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,10.00,,-95.88%,576.00,-8.57%,-42.80%
 Australian Dollar,Future,Currencies,B3,Brazil,Latin America,B3,3909.00,-39.03%,,1843.00,4.95%,
@@ -269,7 +269,7 @@ Bank Nifty Index,Option,Equity,National Stock Exchange of India,India,Asia,Natio
 "Dominion, South Point Natural Gas (Platts IFERC) Basis (PG)",Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,-100.00%,-100.00%,43119.00,-7.57%,-20.15%
 Barley,Future,Agriculture,National Commodity & Derivatives Exchange,India,Asia,National Commodity & Derivatives Exchange,2086.00,-28.98%,-66.08%,541.00,-17.28%,-60.57%
 Base Load Electricity,Future,Energy,Borsa Istanbul,Turkey,Other,Borsa Istanbul,1558.00,-14.54%,-89.47%,912.00,-29.58%,-78.90%
-"Dominion, South Point Natural Gas (Platts IFERC) Fixed Price (DSF)",Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,-100.00%,,180.00,-50.00%,-93.64%
+"Dominion, South Point Natural Gas (Platts IFERC) Fixed PriceÂ (DSF)",Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,-100.00%,,180.00,-50.00%,-93.64%
 Dubai Crude Oil (Platts) Average Price (AH),Option,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,-100.00%,150.00,0.00%,-84.85%
 Bel 20 Index (BXF),Future,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,147.00,88.46%,-8.13%,37.00,5.71%,-21.28%
 Belgian Power,Future,Energy,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,1110.00,-16.04%,5.61%,7988.00,-1.92%,-27.84%
@@ -344,12 +344,12 @@ Bund Weekly - Week3 (OGB3),Option,Interest Rates,Eurex,Germany,Europe,Eurex,4232
 Euro Stoxx Food and Beverage,Option,Equity,Eurex,Germany,Europe,Eurex,0.00,,,13.00,0.00%,
 Bund Weekly - Week5 (OGB5),Option,Interest Rates,Eurex,Germany,Europe,Eurex,13.00,-13.33%,-81.94%,5.00,-44.44%,-92.96%
 Butter,Future,Agriculture,Chicago Mercantile Exchange,United States,North America,CME Group,4086.00,27.57%,0.34%,5055.00,-14.42%,-29.77%
-CAC 40 (€10),Future,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,2810303.00,6.69%,19.73%,349738.00,-2.34%,24.59%
-CAC 40 (€10),Option,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,220303.00,-8.64%,55.85%,699980.00,2.64%,129.70%
+CAC 40 (â‚¬10),Future,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,2810303.00,6.69%,19.73%,349738.00,-2.34%,24.59%
+CAC 40 (â‚¬10),Option,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,220303.00,-8.64%,55.85%,699980.00,2.64%,129.70%
 CAC 40 (Weekly),Option,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,50.00,-5.66%,-96.99%,6.00,-62.50%,-98.80%
 CAC 40 Dividend Index,Future,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,12694.00,-54.09%,26.94%,120399.00,6.09%,67.24%
 CAC 40 Mini,Future,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,510.00,11.11%,-65.79%,34.00,-27.66%,-86.18%
-CAD/USD Premium Quoted (European Style) – 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,168303.00,-28.79%,28186.22%,118869.00,1.35%,19911.62%
+CAD/USD Premium Quoted (European Style) â€“ 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,168303.00,-28.79%,28186.22%,118869.00,1.35%,19911.62%
 Euro Stoxx Mid,Option,Equity,Eurex,Germany,Europe,Eurex,0.00,-100.00%,,300.00,0.00%,
 Euro Stoxx Oil Gas Index Dividend,Future,Equity,Eurex,Germany,Europe,Eurex,0.00,,,530.00,0.00%,-94.96%
 Euro Stoxx Real Estate (OESL),Option,Equity,Eurex,Germany,Europe,Eurex,0.00,-100.00%,,2632.00,0.00%,
@@ -398,7 +398,7 @@ CES China 120 Index,Future,Equity,Hong Kong Exchanges and Clearing,Hong Kong,Asi
 Chana/Gram,Future,Agriculture,National Commodity & Derivatives Exchange,India,Asia,National Commodity & Derivatives Exchange,147268.00,210.31%,,6715.00,129.10%,
 CHF/HUF,Future,Currencies,Budapest Stock Exchange,Hungary,Europe,CEE Stock Exchange Group,5400.00,-65.27%,163.41%,11550.00,2.67%,-37.67%
 Fuel Oil 3.5% FOB Rotterdam Barge Financial (BARQ),Future,Other,Nasdaq NFX,United States,North America,Nasdaq,0.00,,-100.00%,15.00,0.00%,0.00%
-CHF/USD Premium Quoted (European Style) – 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,3799.00,10.98%,5176.39%,6213.00,42.60%,8529.17%
+CHF/USD Premium Quoted (European Style) â€“ 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,3799.00,10.98%,5176.39%,6213.00,42.60%,8529.17%
 CHFPLN,Future,Currencies,Warsaw Stock Exchange,Poland,Europe,Warsaw Stock Exchange,5013.00,9.84%,13.08%,2152.00,-7.00%,26.89%
 Gasoil 0.1 Barges FOB Rotterdam (Platts) vs. Low Sulphur Gasoil (WQ),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,,140.00,-6.67%,164.15%
 Gasoil 0.1 Cargoes CIF MED (Platts) vs. Low Sulphur Gasoil (Z5),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,-100.00%,25.00,-16.67%,-50.00%
@@ -724,7 +724,7 @@ EOW3 S&P 500,Option,Equity,Chicago Mercantile Exchange,United States,North Ameri
 EOW4 E-mini S&P 500,Option,Equity,Chicago Mercantile Exchange,United States,North America,CME Group,1275028.00,58.99%,21.03%,109048.00,110.90%,51.22%
 Equity Can-Do,Future,Equity,JSE Securities Exchange,South Africa,Other,JSE Securities Exchange,58318.00,90.26%,-47.12%,301241.00,-0.83%,-60.35%
 Equity Can-Do,Option,Equity,JSE Securities Exchange,South Africa,Other,JSE Securities Exchange,100397.00,11.92%,-85.00%,222915.00,-19.56%,-54.14%
-ERCOT Houston 345 kV Hub 5 MW Peak (I1),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,2200.00,,,3880.00,130.95%,
+ERCOT Houston 345 kV Hub 5 MW PeakÂ (I1),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,2200.00,,,3880.00,130.95%,
 ERCOT Houston 345 KV Hub Real-Time Off-Peak Financial (50 MWh) (HEBQ),Future,Energy,Nasdaq NFX,United States,North America,Nasdaq,6404.00,,,6404.00,,
 ERCOT Houston 345 KV Hub Real-Time Peak Financial (50 MW) (ERHQ),Future,Energy,Nasdaq NFX,United States,North America,Nasdaq,132.00,,,384.00,52.38%,
 ERCOT North 345 kV Hub 5 MW Off-Peak (I6),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,21200.00,,,21200.00,,167.51%
@@ -780,7 +780,7 @@ EUR/USD,Option,Currencies,Moscow Exchange,Russia,Europe,Moscow Exchange,584.00,1
 EUR/USD,Option,Currencies,North American Derivative Exchange,United States,North America,North American Derivative Exchange,180372.00,19.42%,87.56%,,,
 MSCI Switzerland Net Total Return CHF - Standard Index,Future,Equity,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,0.00,-100.00%,,2837.00,0.00%,-26.99%
 EUR/USD FX (XEF),Future,Currencies,Taiwan Futures Exchange,Taiwan,Asia,Taiwan Futures Exchange,8529.00,42.22%,,1509.00,55.57%,
-EUR/USD Premium Quoted (European Style) – 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,1073610.00,24.00%,74508.06%,375909.00,11.11%,29569.22%
+EUR/USD Premium Quoted (European Style) â€“ 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,1073610.00,24.00%,74508.06%,375909.00,11.11%,29569.22%
 Euribor 3 Year 0.00% Interest Rate,Future,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,558.00,-36.16%,27800.00%,941.00,145.69%,95.63%
 Euro,Future,Currencies,B3,Brazil,Latin America,B3,65235.00,107.99%,,29106.00,67.51%,
 MSCI Taiwan NTR Index,Future,Equity,Singapore Exchange,Singapore,Asia,Singapore Exchange,0.00,,,1.00,0.00%,
@@ -972,7 +972,7 @@ FTSE 100 Index (ESX),Option,Equity,ICE Futures Europe,United Kingdom,Europe,Inte
 FTSE 100 Margin,Future,Equity,Tokyo Financial Exchange,Japan,Asia,Tokyo Financial Exchange,41895.00,128.61%,789.87%,20014.00,31.44%,229.02%
 FTSE 100 Mini Index (UKXM),Option,Equity,Chicago Board Options Exchange,United States,North America,CBOE Holdings,1.00,,,,,
 NYISO Zone J Off-Peak LBMP (KK),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,,150.00,-16.67%,-76.19%
-FTSE 250 £2,Future,Equity,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,8390.00,-34.42%,-41.71%,32571.00,0.98%,2.76%
+FTSE 250 Â£2,Future,Equity,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,8390.00,-34.42%,-41.71%,32571.00,0.98%,2.76%
 FTSE 250 Index FLEX,Option,Equity,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,848.00,-15.20%,,5653.00,3.35%,-13.03%
 FTSE China A50 Index,Future,Equity,Singapore Exchange,Singapore,Asia,Singapore Exchange,6087300.00,9.66%,1.98%,643149.00,4.30%,-4.01%
 FTSE EPRA Europe,Future,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,1310.00,-3.68%,-33.23%,7356.00,4.83%,8.96%
@@ -1022,7 +1022,7 @@ GBP/USD,Future,Currencies,Budapest Stock Exchange,Hungary,Europe,CEE Stock Excha
 GBP/USD,Future,Currencies,Moscow Exchange,Russia,Europe,Moscow Exchange,109944.00,-22.83%,-17.44%,10282.00,-41.14%,-71.39%
 GBP/USD,Option,Currencies,North American Derivative Exchange,United States,North America,North American Derivative Exchange,72220.00,20.51%,5.61%,,,
 PJM AEP Dayton Hub Day-Ahead Off-Peak Calendar-Month 5 MW (R7),Future,Energy,New York Mercantile Exchange,United States,North America,CME Group,0.00,,,162428.00,-5.80%,23.67%
-GBP/USD Premium Quoted (European Style) – 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,235577.00,17.21%,29310.36%,155911.00,4.88%,20095.73%
+GBP/USD Premium Quoted (European Style) â€“ 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,235577.00,17.21%,29310.36%,155911.00,4.88%,20095.73%
 GBPPLN,Future,Currencies,Warsaw Stock Exchange,Poland,Europe,Warsaw Stock Exchange,2206.00,-17.84%,,1696.00,9.56%,
 gC Newcastle Coal,Future,Energy,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,16108.00,-8.67%,-41.38%,25559.00,2.44%,-20.82%
 gC Newcastle Coal,Option,Energy,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,1200.00,-50.98%,-73.33%,32736.00,1.87%,1.27%
@@ -1248,7 +1248,7 @@ Stoxx Europe 600 Telecommunications,Option,Equity,Eurex,Germany,Europe,Eurex,0.0
 ISE FX Yen (YUK),Option,Currencies,International Securities Exchange,United States,North America,Eurex,145.00,-26.77%,-84.67%,,,
 Stoxx Europe Mid 200,Option,Equity,Eurex,Germany,Europe,Eurex,0.00,-100.00%,,1765.00,0.00%,
 Stoxx Europe Small 200 Index,Option,Equity,Eurex,Germany,Europe,Eurex,0.00,,,6525.00,0.00%,
-iShares DAX® UCITS ETF (DE),Option,Equity,Eurex,Germany,Europe,Eurex,5452.00,706.51%,323.95%,6066.00,121.95%,-14.78%
+iShares DAXÂ® UCITS ETF (DE),Option,Equity,Eurex,Germany,Europe,Eurex,5452.00,706.51%,323.95%,6066.00,121.95%,-14.78%
 iShares Euro Stoxx 50 UCITS ETF,Option,Equity,Eurex,Germany,Europe,Eurex,21613.00,-55.87%,9.13%,36651.00,-1.61%,64.81%
 iShares Euro Stoxx 50 UCITS ETF (Dist),Option,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,412.00,-60.76%,-59.17%,3610.00,-33.35%,277.62%
 iShares Euro Stoxx 50 UCITS ETF (Dist) (Weekly),Option,Equity,Euronext Derivatives Market,United Kingdom,Europe,Euronext,84.00,82.61%,,37.00,-11.90%,
@@ -1310,7 +1310,7 @@ JPX-Nikkei Index 400,Future,Equity,Japan Exchange,Japan,Asia,Japan Exchange,5547
 USD Crude Palm Oil,Future,Agriculture,Chicago Mercantile Exchange,United States,North America,CME Group,0.00,-100.00%,-100.00%,660.00,-26.67%,450.00%
 JPY/Indian Rupee,Future,Currencies,Metropolitan Stock Exchange of India,India,Asia,Metropolitan Stock Exchange of India,1318.00,-91.51%,-96.06%,333.00,66.50%,-87.39%
 JPY/INR,Future,Currencies,BSE,India,Asia,BSE,16018.00,-75.17%,-79.85%,789.00,15.52%,-65.27%
-JPY/USD Premium Quoted (European Style) – 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,341672.00,12.29%,64003.56%,155936.00,11.89%,29156.29%
+JPY/USD Premium Quoted (European Style) â€“ 2 PM Fix,Option,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,341672.00,12.29%,64003.56%,155936.00,11.89%,29156.29%
 USD/CHF,Future,Currencies,Budapest Stock Exchange,Hungary,Europe,CEE Stock Exchange Group,0.00,,-100.00%,200.00,0.00%,-97.30%
 USD/RUB,Future,Currencies,Budapest Stock Exchange,Hungary,Europe,CEE Stock Exchange Group,0.00,-100.00%,,700.00,0.00%,16.67%
 USD/UAH,Future,Currencies,Moscow Exchange,Russia,Europe,Moscow Exchange,0.00,-100.00%,-100.00%,12.00,0.00%,-80.65%
@@ -2083,9 +2083,9 @@ Sugar No. 11 1 Month,Option,Agriculture,ICE Futures U.S.,United States,North Ame
 Sunflower Seed (SUNS),Future,Agriculture,JSE Securities Exchange,South Africa,Other,JSE Securities Exchange,31994.00,27.16%,45.14%,11789.00,-9.77%,61.56%
 Sunflower Seed (SUNS),Option,Agriculture,JSE Securities Exchange,South Africa,Other,JSE Securities Exchange,4165.00,33.97%,145.43%,4388.00,1.41%,56.71%
 Supramax Dry Freight,Future,Other,Nasdaq Commodities,Sweden,Europe,Nasdaq,3165.00,2.06%,4.80%,14109.00,-4.41%,0.63%
-Swapnote € - 2 Year,Future,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,16546.00,110.88%,21.04%,14802.00,20.96%,-25.07%
-Swapnote € - 5 Year,Future,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,4217.00,-10.01%,-37.34%,7724.00,-15.37%,-34.25%
-Swapnote € - 10 Year,Future,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,27.00,-83.64%,-84.12%,1324.00,1.53%,1.07%
+Swapnote â‚¬ - 2 Year,Future,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,16546.00,110.88%,21.04%,14802.00,20.96%,-25.07%
+Swapnote â‚¬ - 5 Year,Future,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,4217.00,-10.01%,-37.34%,7724.00,-15.37%,-34.25%
+Swapnote â‚¬ - 10 Year,Future,Interest Rates,ICE Futures Europe,United Kingdom,Europe,Intercontinental Exchange,27.00,-83.64%,-84.12%,1324.00,1.53%,1.07%
 Sweden Krona/Japanese Yen,Future,Currencies,Tokyo Financial Exchange,Japan,Asia,Tokyo Financial Exchange,4133.00,32.51%,2655.33%,379.00,-2.57%,576.79%
 Swedish Krona,Future,Currencies,Chicago Mercantile Exchange,United States,North America,CME Group,1523.00,26.60%,20.59%,1760.00,8.04%,36.96%
 Swedish Krona/Japanese Yen,Future,Currencies,ICE Futures U.S.,United States,North America,Intercontinental Exchange,70.00,94.44%,,0.00,-100.00%,
