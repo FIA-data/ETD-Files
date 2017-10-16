@@ -1,0 +1,80 @@
+Exchange_Name,Country,Region,Volume,Volume_M_Change,Volume_Y_Change,Open_Interest,Open_Interest_M_Change,Open_Interest_Y_Change
+ASX,Australia,Asia,8059646,-15.9%,-7.9%,9572441,-8.4%,-0.5%
+ASX 24,Australia,Asia,17475608,95.4%,11.6%,3970802,-0.6%,16.1%
+Athens Derivatives Exchange,Greece,Other,2451036,225.7%,106.0%,346576,-34.8%,28.3%
+B3,Brazil,Latin America,175264922,5.2%,,78864853,10.3%,
+Bats Exchange,United States,North America,27307540,-20.8%,-28.1%,,,
+Bolsa de Valores de Colombia,Colombia,Latin America,94035,-11.4%,-54.5%,49704,-9.6%,-27.5%
+Borsa Istanbul,Turkey,Other,10778038,1.0%,98.3%,2879717,22.3%,56.7%
+Borsa Italiana (IDEM),Italy,Europe,2538536,31.5%,-35.1%,4927090,-6.6%,-24.7%
+Boston Options Exchange,United States,North America,6869623,-13.5%,-21.4%,,,
+BSE,India,Asia,56092443,18.6%,42.4%,1623365,-2.6%,9.9%
+Budapest Stock Exchange,Hungary,Europe,497223,4.5%,-16.8%,674014,-10.8%,11.6%
+C2 Exchange,United States,North America,11345289,-13.9%,27.1%,,,
+CBOE Futures Exchange,United States,North America,5724747,-37.6%,-9.8%,667854,10.3%,37.2%
+Chicago Board of Trade,United States,North America,103206673,-27.7%,18.2%,23420668,0.4%,21.7%
+Chicago Board Options Exchange,United States,North America,92559504,-15.8%,0.5%,,,
+Chicago Mercantile Exchange,United States,North America,169856680,14.9%,0.6%,63486100,-6.9%,17.3%
+China Financial Futures Exchange,China,Asia,1614659,-21.0%,49.1%,231637,11.7%,37.7%
+Commodity Exchange (COMEX),United States,North America,12570543,-8.3%,68.3%,2213179,-4.4%,-0.6%
+Dalian Commodity Exchange,China,Asia,95785064,-12.8%,10.5%,4811126,-8.8%,-23.4%
+Dubai Gold & Commodities Exchange,United Arab Emirates,Asia,1872080,38.2%,1.2%,192818,8.5%,-51.6%
+Dubai Mercantile Exchange,United Arab Emirates,Asia,111105,-11.3%,-34.3%,41914,-19.1%,51.8%
+EDGX Options Exchange,United States,North America,3722778,-13.7%,4.5%,,,
+Eris Exchange,United States,North America,55962,65.8%,39.6%,197751,1.2%,16.5%
+Eurex,Germany,Europe,147897293,33.6%,-9.0%,115007676,-4.7%,5.4%
+Euronext Derivatives Market,United Kingdom,Europe,10533410,-9.1%,8.4%,16893353,-1.2%,13.4%
+Hong Kong Exchanges and Clearing,Hong Kong,Asia,17501715,-20.8%,-3.3%,11915048,-9.3%,23.6%
+ICE Futures Canada,Canada,North America,413689,29.6%,-4.5%,234727,22.2%,-11.7%
+ICE Futures Europe,United Kingdom,Europe,106624185,20.1%,31.4%,46124597,-7.8%,15.2%
+ICE Futures Singapore,Singapore,Asia,247599,-32.3%,182.2%,9539,21.8%,86.0%
+ICE Futures U.S.,United States,North America,29077473,14.9%,-11.9%,24214296,-5.9%,-11.5%
+India International Exchange,India,Asia,42442,-26.3%,,50,-89.3%,
+Indonesia Commodity & Derivatives Exchange,Indonesia,Asia,20573,-4.0%,-63.0%,191,-23.6%,-24.2%
+International Securities Exchange,United States,North America,25451094,-9.7%,-31.4%,,,
+International Securities Exchange Gemini,United States,North America,14467719,-19.3%,139.7%,,,
+International Securities Exchange Mercury,United States,North America,528594,5.8%,-23.6%,,,
+Japan Exchange,Japan,Asia,28436346,23.0%,18.6%,4392139,-5.1%,14.3%
+JSE Securities Exchange,South Africa,Other,62843766,259.7%,-1.8%,37336045,-3.6%,-22.5%
+Korea Exchange,South Korea,Asia,97516104,-6.9%,83.8%,7207352,-6.8%,65.9%
+London Metal Exchange,United Kingdom,Europe,15729970,10.6%,25.2%,2965480,-3.2%,5.6%
+LSE Derivatives Market,United Kingdom,Europe,874704,56.3%,103.2%,1603203,-9.3%,56.5%
+Malaysia Derivatives Exchange,Malaysia,Asia,1201502,-4.0%,-1.1%,261360,2.9%,15.5%
+MEFF,Spain,Europe,4995764,130.8%,9.6%,10418386,-5.0%,-5.6%
+Mercado a Termino de Buenos Aires,Argentina,Latin America,17325,17.3%,3.8%,29661,3.3%,-7.7%
+Metropolitan Stock Exchange of India,India,Asia,1207563,-10.9%,-76.1%,235695,-23.3%,-21.5%
+Mexican Derivatives Exchange,Mexico,Latin America,1032790,119.4%,-49.2%,1354563,-0.3%,-29.8%
+MIAX Options,United States,North America,13819054,-18.8%,-39.8%,,,
+MIAX Pearl,United States,North America,5532776,-1.0%,,,,
+Minneapolis Grain Exchange,United States,North America,166028,-46.7%,19.9%,99706,3.4%,47.1%
+Montreal Exchange,Canada,North America,9554939,23.5%,28.6%,6736550,0.5%,12.7%
+Moscow Exchange,Russia,Europe,130852039,-3.2%,-23.6%,11541942,-23.6%,12.0%
+Multi Commodity Exchange of India,India,Asia,18054712,-4.9%,-11.8%,295141,1.4%,-10.0%
+Nasdaq Boston,United States,North America,1915477,-13.1%,-16.4%,,,
+Nasdaq Commodities,Sweden,Europe,228108,4.5%,-24.6%,662063,1.7%,-8.8%
+Nasdaq Exchanges Nordic Markets,Sweden,Europe,8541660,29.5%,7.1%,7022601,-6.9%,7.4%
+Nasdaq NFX,United States,North America,3587922,-20.7%,12.8%,3315156,1.5%,256.9%
+Nasdaq Options Market,United States,North America,25016070,-16.7%,-6.7%,,,
+Nasdaq PHLX,United States,North America,48646701,-12.1%,-3.9%,,,
+National Commodity & Derivatives Exchange,India,Asia,1194226,-8.8%,-26.4%,93632,-6.5%,-21.9%
+National Stock Exchange of India,India,Asia,243378749,6.8%,33.4%,10036989,-3.2%,16.9%
+New York Mercantile Exchange,United States,North America,53902576,-16.8%,4.1%,24704068,-2.0%,-7.7%
+North American Derivative Exchange,United States,North America,778325,-16.7%,3.9%,,,
+NYSE Amex,United States,North America,23066696,-10.6%,-10.0%,,,
+NYSE Arca,United States,North America,24867474,-13.0%,-25.9%,,,
+OCC,United States,North America,,,,307122172,-1.1%,2.9%
+OneChicago,United States,North America,1438755,16.7%,34.0%,514855,-14.4%,22.2%
+Osaka Dojima Commodity Exchange,Japan,Asia,14405,-44.0%,-68.0%,9552,-7.0%,-46.6%
+Oslo Stock Exchange,Norway,Europe,1090182,53.7%,13.9%,1120992,-6.6%,-20.1%
+Pakistan Mercantile Exchange,Pakistan,Asia,258285,-26.0%,-15.1%,8815,-25.9%,-6.8%
+Rosario Futures Exchange,Argentina,Latin America,14442027,-9.6%,36.4%,2645525,-3.4%,15.8%
+SGX,Singapore,Asia,1513587,-12.2%,46.4%,1624964,0.3%,24.8%
+Shanghai Futures Exchange,China,Asia,117268107,-23.9%,18.9%,4623474,-13.6%,14.6%
+Singapore Exchange,Singapore,Asia,14510932,2.4%,17.3%,3349858,0.8%,23.6%
+Taiwan Futures Exchange,Taiwan,Asia,26222226,-7.5%,39.8%,1633247,1.2%,48.7%
+Tel-Aviv Stock Exchange,Israel,Other,3208791,-34.9%,-17.2%,740611,-13.7%,7.3%
+Thailand Futures Exchange,Thailand,Asia,10590768,80.0%,1.9%,2638806,20.6%,66.7%
+Tokyo Commodity Exchange,Japan,Asia,2212163,-2.0%,29.5%,558412,1.1%,0.2%
+Tokyo Financial Exchange,Japan,Asia,3329219,3.7%,-12.9%,1907710,2.2%,5.3%
+Warsaw Stock Exchange,Poland,Europe,732480,40.5%,-12.8%,147753,-16.5%,20.6%
+Zhengzhou Commodity Exchange,China,Asia,51775480,-3.6%,-13.3%,2846648,-17.9%,11.0%
