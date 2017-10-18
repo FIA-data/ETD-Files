@@ -142,7 +142,7 @@ $(document).bind('click', function(e) {
   if (!$clicked.parents().hasClass("dropdown3")) $(".dropdown3 dd ul").hide();
 });
 });
-d3.csv("https://rawgit.com/ovik-chakraborty/Tutorial/master/contract-rankings-stats2.csv", function(error, spendData) {
+d3.csv("https://rawgit.com/ovik-chakraborty/Tutorial/master/contract-rankings-stats3.csv", function(error, spendData) {
 spendData.forEach(function(d) {
 
 
