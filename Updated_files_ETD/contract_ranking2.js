@@ -453,7 +453,7 @@ var dataTableOptions = {
                         },
                         targets: 4,
                         "width": "10%",
-                        data: function (d) { return d.Volume; }
+                        data: function (d) { return numberformat(d.Volume); }
                     },
 {
                         "title": "Volume M/M Change",
@@ -487,7 +487,7 @@ var dataTableOptions = {
                         },
                         targets: 7,
                         "width": "5%",
-                        data: function (d) { return d.Volume_YTD; }
+                        data: function (d) { return numberformat(d.Volume_YTD); }
                     },
 					{
                         "title": "Volume YTD Change",
@@ -509,7 +509,7 @@ var dataTableOptions = {
                         },
                         targets: 9,
                         "width": "10%",
-                        data: function (d) { return d.Open_Interest; }
+                        data: function (d) { return numberformat(d.Open_Interest); }
                     },
                 ]
             };
@@ -519,7 +519,8 @@ data = $('#table').dataTable(dataTableOptions);
                      data.api()
                       .clear()
                       .rows.add(allDim.top(Infinity))
-                      .draw();
+                      .draw();
+
                 });
             }
 
@@ -527,12 +528,14 @@ data = $('#table').dataTable(dataTableOptions);
                 var chartI = dc.chartRegistry.list()[i];
                 chartI.on("filtered", RefreshTable);
             }
-
+
+
 
 
 
                  
-
+
+
   
 
 d3.select('#CSV')
@@ -544,7 +547,8 @@ d3.select('#CSV')
         var blob = new Blob([d3.csv.format(data)], {type: "text/csv;charset=utf-8"});
         saveAs(blob, 'data.csv');
     });
-RefreshTable();
+RefreshTable();
+
 dc.renderAll();
 
 d3.select('#render')
@@ -667,7 +671,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 4,
                         "width": "10%",
-                        data: function (d) { return d.Volume; }
+                        data: function (d) { return numberformat(d.Volume); }
                     },
 {
                         "title": "Volume M/M Change",
@@ -701,7 +705,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 7,
                         "width": "5%",
-                        data: function (d) { return d.Volume_YTD; }
+                        data: function (d) { return numberformat(d.Volume_YTD); }
                     },
 					{
                         "title": "Volume YTD Change",
@@ -723,7 +727,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 9,
                         "width": "10%",
-                        data: function (d) { return d.Open_Interest; }
+                        data: function (d) { return numberformat(d.Open_Interest); }
                     },
                 ]
             };
@@ -733,7 +737,8 @@ data = $('#table').dataTable(dataTableOptions);
                      data.api()
                       .clear()
                       .rows.add(allDim.top(Infinity))
-                      .draw();
+                      .draw();
+
                 });
             }
 
@@ -741,9 +746,11 @@ data = $('#table').dataTable(dataTableOptions);
                 var chartI = dc.chartRegistry.list()[i];
                 chartI.on("filtered", RefreshTable1);
             }
-
 
-RefreshTable1();
+
+
+RefreshTable1();
+
 dc.renderAll();
 }
 if(d3.select('#download-type1 input:checked').node().value==='open') {
@@ -851,7 +858,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 4,
                         "width": "10%",
-                        data: function (d) { return d.Open_Interest; }
+                        data: function (d) { return numberformat(d.Open_Interest); }
                     },
 {
                         "title": "Open Interest M/M Change",
@@ -885,7 +892,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 7,
                         "width": "5%",
-                        data: function (d) { return d.Open_Interest_YTD; }
+                        data: function (d) { return numberformat(d.Open_Interest_YTD); }
                     },
 					{
                         "title": "Open Interest YTD Change",
@@ -907,7 +914,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 9,
                         "width": "10%",
-                        data: function (d) { return d.Volume; }
+                        data: function (d) { return numberformat(d.Volume); }
                     },
                 ]
             };
@@ -917,7 +924,8 @@ data = $('#table').dataTable(dataTableOptions);
                      data.api()
                       .clear()
                       .rows.add(allDim.top(Infinity))
-                      .draw();
+                      .draw();
+
                 });
             }
 
@@ -925,10 +933,12 @@ data = $('#table').dataTable(dataTableOptions);
                 var chartI = dc.chartRegistry.list()[i];
                 chartI.on("filtered", RefreshTable2);
             }
-
+
+
 
 RefreshTable2();
-
+
+
 dc.renderAll();
 }
 });
