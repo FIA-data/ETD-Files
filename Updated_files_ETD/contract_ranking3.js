@@ -453,7 +453,7 @@ var dataTableOptions = {
                         },
                         targets: 4,
                         "width": "10%",
-                        data: function (d) { return numberformat(d.Volume); }
+                        data: function (d) { return d.Volume; }
                     },
 {
                         "title": "Volume M/M Change",
@@ -487,7 +487,7 @@ var dataTableOptions = {
                         },
                         targets: 7,
                         "width": "5%",
-                        data: function (d) { return numberformat(d.Volume_YTD); }
+                        data: function (d) { return d.Volume_YTD; }
                     },
 					{
                         "title": "Volume YTD Change",
@@ -509,7 +509,7 @@ var dataTableOptions = {
                         },
                         targets: 9,
                         "width": "10%",
-                        data: function (d) { return numberformat(d.Open_Interest); }
+                        data: function (d) { return d.Open_Interest; }
                     },
                 ]
             };
@@ -671,7 +671,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 4,
                         "width": "10%",
-                        data: function (d) { return numberformat(d.Volume); }
+                        data: function (d) { return d.Volume; }
                     },
 {
                         "title": "Volume M/M Change",
@@ -705,7 +705,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 7,
                         "width": "5%",
-                        data: function (d) { return numberformat(d.Volume_YTD); }
+                        data: function (d) { return d.Volume_YTD; }
                     },
 					{
                         "title": "Volume YTD Change",
@@ -727,7 +727,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 9,
                         "width": "10%",
-                        data: function (d) { return numberformat(d.Open_Interest); }
+                        data: function (d) { return d.Open_Interest; }
                     },
                 ]
             };
@@ -858,7 +858,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 4,
                         "width": "10%",
-                        data: function (d) { return numberformat(d.Open_Interest); }
+                        data: function (d) { return d.Open_Interest; }
                     },
 {
                         "title": "Open Interest M/M Change",
@@ -892,7 +892,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 7,
                         "width": "5%",
-                        data: function (d) { return numberformat(d.Open_Interest_YTD); }
+                        data: function (d) { return d.Open_Interest_YTD; }
                     },
 					{
                         "title": "Open Interest YTD Change",
@@ -914,7 +914,7 @@ dataTableOptions = {"lengthMenu": [[10,20,30], [10,20,30]],
                         },
                         targets: 9,
                         "width": "10%",
-                        data: function (d) { return numberformat(d.Volume); }
+                        data: function (d) { return d.Volume; }
                     },
                 ]
             };
