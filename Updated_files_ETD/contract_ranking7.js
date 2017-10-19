@@ -558,9 +558,9 @@ elect.select('ul').remove();
 var elect1 = d3.select("#menu1select");
 elect1.select('ul').remove();
 var elect2 = d3.select("#menu2select");
-elect1.select('ul').remove();
+elect2.select('ul').remove();
 var elect3 = d3.select("#menu3select");
-elect1.select('ul').remove();	
+elect3.select('ul').remove();	
 
 
 //var elect2 = d3.select("#table");
