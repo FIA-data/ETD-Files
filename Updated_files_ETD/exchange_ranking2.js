@@ -463,7 +463,8 @@ data = $('#table').dataTable(dataTableOptions);
                      data.api()
                       .clear()
                       .rows.add(allDim.top(Infinity))
-                      .draw();
+                      .draw();
+
                 });
             }
 
@@ -471,12 +472,14 @@ data = $('#table').dataTable(dataTableOptions);
                 var chartI = dc.chartRegistry.list()[i];
                 chartI.on("filtered", RefreshTable);
             }
-
+
+
 
 
 
                  
-
+
+
   
 
 d3.select('#CSV')
@@ -488,7 +491,8 @@ d3.select('#CSV')
         var blob = new Blob([d3.csv.format(data)], {type: "text/csv;charset=utf-8"});
         saveAs(blob, 'data.csv');
     });
-RefreshTable();
+RefreshTable();
+
 dc.renderAll();
 
 d3.select('#render')
@@ -497,7 +501,8 @@ var elect = d3.select("#meniselect");
 elect.select('ul').remove();
 var elect1 = d3.select("#menu1select");
 elect1.select('ul').remove();
-
+var elect2 = d3.select("#menu2select");
+elect2.select('ul').remove();
 
 
 //var elect2 = d3.select("#table");
@@ -638,7 +643,8 @@ data = $('#table').dataTable(dataTableOptions);
                      data.api()
                       .clear()
                       .rows.add(allDim.top(Infinity))
-                      .draw();
+                      .draw();
+
                 });
             }
 
@@ -646,9 +652,11 @@ data = $('#table').dataTable(dataTableOptions);
                 var chartI = dc.chartRegistry.list()[i];
                 chartI.on("filtered", RefreshTable1);
             }
-
 
-RefreshTable1();
+
+
+RefreshTable1();
+
 dc.renderAll();
 }
 if(d3.select('#download-type1 input:checked').node().value==='open') {
@@ -784,7 +792,8 @@ data = $('#table').dataTable(dataTableOptions);
                      data.api()
                       .clear()
                       .rows.add(allDim.top(Infinity))
-                      .draw();
+                      .draw();
+
                 });
             }
 
@@ -792,10 +801,12 @@ data = $('#table').dataTable(dataTableOptions);
                 var chartI = dc.chartRegistry.list()[i];
                 chartI.on("filtered", RefreshTable2);
             }
-
+
+
 
 RefreshTable2();
-
+
+
 dc.renderAll();
 }
 });
@@ -832,4 +843,5 @@ $('select').change(function(e) {
 });
 
  });
-
+
+
