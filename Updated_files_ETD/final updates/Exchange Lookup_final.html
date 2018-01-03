@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Ovik POC</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/dc-js/dc.js/master/web/css/dc.css"/>
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://rawgit.com/KidSysco/jquery-ui-month-picker/master/src/MonthPicker.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+title {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    visibility: visible;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+title:hover {
+    visibility: visible;
+}
+
+h4{
+	border-bottom: 1px solid #1a1a1a;
+	padding-bottom: .1em;
+	margin-bottom: 1em;
+	position: relative;
+	font-size: 1.4em;
+        font-weight: 300;
+}
+
+.chart_box h3{
+	font-size: 1.1em;
+}
+.info_chart{
+	position: absolute;
+	top: -38px;
+	right: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: -30px;
+	width: 100%;
+}
+
+.info.important {
+  border:1px solid #ee2222;
+}
+
+.info.opened{
+	padding-bottom: 16px;
+	background: #e6e6e6 url(https://rawgit.com/tttp/iw-fr/master/img/close_info.svg) no-repeat center top;
+}
+.info{
+	position: absolute;
+	background: #e6e6e6 url(https://rawgit.com/tttp/iw-fr/master/img/info.svg) no-repeat;
+	display: block;
+	top: 37px;
+	right: 0px;
+	width: 21px;
+	height: 22.4px;
+	text-indent: -9834em;
+	cursor: pointer;
+}
+p.desc{
+	width: 100%;
+	margin-left: 15px;
+	background: #e6e6e6;
+	padding: 15px;
+	position: relative;
+	top: 58px;
+	
+	z-index: 1;
+	display: none;
+}
+.info_table{
+	position: absolute;
+	top: -30px;
+	right: 25px;
+}
+.info_chart p.desc{
+	font-weight: normal;
+	font-size: .875em;
+}
+    /* testing out d3 tooltip */
+    .d3-tip {
+      line-height: 1;
+      font-weight: bold;
+      padding: 12px;
+      background:  rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+
+     .no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(FIA_universal1.png) center no-repeat #fff;
+}
+    </style>
+    <style>
+
+ 
+   body{font-family: Arial;}
+ 
+   .container{
+    width:150px;height:150px;
+   
+ position: relative;
+    perspective: 800px;
+    margin:0 auto;
+    }
+  
+  .card{
+    text-align:center;
+    position: absolute;
+ 
+   width: 100%;
+    height: 100%;
+    }
+   
+ .card h3{color:#000;}
+  
+  .card p{color:#000;font-family: 'Arial';font-weight:500;}
+  
+  .card:hover .front {
+    transform: rotateY(-180deg);
+    }
+  
+  .card:hover .back {
+    transform: rotateY(0deg);
+    }
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; backface-visibility: hidden; transition: 0.5s; padding: 1px;
+    }
+ 
+   .face.front{
+    background:#fff;
+ border:1px solid;   transform: rotateY(0deg);
+    }
+   
+ .face.back {
+    display: block;
+    transform: rotateY(180deg);
+   color: white;
+    text-align: center;
+    background-color: #fff; border:1px solid #000;
+    }
+  
+  .card a.btn.btn-block{display:block;}
+  
+  .card a.btn.btn-outline{background:#000;border:1px solid #fff;border-radius:3px;padding:5px;color:#fff;text-align:center;text-decoration:none;}
+   
+ .card a.btn.btn-outline:hover{background:#773f86;border:1px solid transparent;}
+
+ .dc-chart g.row text {fill: black;}
+body {
+  font-family: Arial; font-size:13px;
+margin: 0 auto;
+
+}
+
+.dropdown {
+  position: relative;
+  
+}
+.dropdown1 {
+  position: relative;
+  
+}
+.dropdown2 {
+  position: relative;
+  
+}
+
+a {
+  color: #000;
+}
+
+.dropdown dd,
+.dropdown dt {
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+.dropdown1 dd,
+.dropdown1 dt {
+  margin: 0px;
+  padding: 0px;
+  
+}
+.dropdown2 dd,
+.dropdown2 dt {
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+.dropdown ul {
+  margin: -1px 0 0 0;
+  
+ }
+
+.dropdown1 ul {
+  margin: -1px 0 0 0;
+  
+ }
+.dropdown2 ul {
+  margin: -1px 0 0 0;
+  
+ }
+.dropdown dd {
+  position: relative;
+
+}
+.dropdown1 dd {
+  position: relative;
+
+}
+.dropdown2 dd {
+  position: relative;
+
+}
+
+.dropdown a,
+.dropdown a:visited {
+  color:#000;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+}
+
+.dropdown1 a,
+.dropdown1 a:visited {
+  color:#000;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+}
+.dropdown2 a,
+.dropdown2 a:visited {
+  color:#000;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+}
+.dropdown dt a {
+  background-color: #fff;
+  display: block;
+  padding: 8px 20px 5px 10px;
+  height: 38px;
+  min-height: 10px;
+  line-height: 8px;
+  overflow: hidden;
+  border: 1px solid black;
+  width: 150px;
+  font-size: 12px;
+}
+.dropdown1 dt a {
+  background-color: #fff;
+  display: block;
+  padding: 8px 20px 5px 10px;
+  height: 38px;
+  min-height: 10px;
+  line-height: 8px;
+  overflow: hidden;
+  border: 1px solid black;
+  width: 150px;
+  font-size: 12px;
+}
+.dropdown2 dt a {
+  background-color: #fff;
+  display: block;
+  padding: 8px 20px 5px 10px;
+  height: 38px;
+  min-height: 10px;
+  line-height: 8px;
+  overflow: hidden;
+  border: 1px solid black;
+  width: 150px;
+  font-size: 12px;
+}
+
+.dropdown dt a span,
+.multiSel span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 3px 2px 15px;
+  
+}
+
+.dropdown1 dt a span,
+.multiSel1 span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 3px 2px 15px;
+  
+}
+.dropdown2 dt a span,
+.multiSel2 span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 3px 2px 15px;
+  
+}
+.dropdown dd ul {
+  background-color: #fff;
+  border: 1px solid black;
+  color: white;
+  display: none;
+  left: 0px;
+  padding: 2px 15px 2px 5px;
+  position: absolute;
+  top: 2px;
+  width: 235px;
+  list-style: none;
+  height: 230px;
+  overflow: auto;
+  font-size: 11px;
+  z-index:99;
+}
+.dropdown1 dd ul {
+  background-color: #fff;
+  border: 1px solid black;
+  color: #75787B;
+  display: none;
+  left: 0px;
+  padding: 2px 15px 2px 5px;
+  position: absolute;
+  top: 2px;
+  width: 235px;
+  list-style: none;
+  height: 230px;
+  overflow: auto;
+  font-size: 11px;
+  z-index:99;
+}
+.dropdown2 dd ul {
+  background-color: #fff;
+  border: 1px solid black;
+  color: #75787B;
+  display: none;
+  left: 0px;
+  padding: 2px 15px 2px 5px;
+  position: absolute;
+  top: 2px;
+  width: 235px;
+  list-style: none;
+  height: 300px;
+  overflow: auto;
+  font-size: 11px;
+  z-index:99;
+
+}
+.dropdown span.value {
+  display: none;
+}
+
+.dropdown1 span.value {
+  display: none;
+}
+.dropdown2 span.value {
+  display: none;
+}
+.dropdown dd ul li {
+  padding: 5px;
+  display: block;
+  color:#000;
+}
+dd ul li input {
+vertical-align: middle;
+}
+
+dd ul li b {
+vertical-align: middle;
+padding-left:2px;
+}
+.dropdown1 dd ul li {
+  padding: 5px;
+  display: block;
+  color:#000;
+}
+.dropdown2 dd ul li {
+  padding: 5px;
+  display: block;
+  color:#000;
+}
+.dropdown dd ul li:hover {
+  background-color: #DCDCDC;
+}
+.dropdown1 dd ul li:hover {
+  background-color: #DCDCDC;
+}
+.dropdown2 dd ul li:hover {
+  background-color: #DCDCDC;
+}
+
+select{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+button {
+  background-color: #F5F5F5;
+  width: 80px;
+height: 39px;
+  border: 1px solid black;
+  padding: 10px 0;
+  text-align: top;
+  color: black;
+  font-weight: bold;
+border-radius: 5px;
+
+}
+button:hover {background-color: #44C8F5}
+.button2 {
+  background-color: #F5F5F5;
+  width: 40px;
+height: 39px;
+  border: 1px solid black;
+  padding: 10px 0;
+  text-align: top;
+  color: black;
+  font-weight: bold;
+border-radius: 5px;
+
+}
+.button2:hover {background-color: #44C8F5}
+.button3 {
+  background-color: #F5F5F5;
+  width: 50px;
+height: 39px;
+  border: 1px solid black;
+  padding: 10px 0;
+  text-align: top;
+  color: black;
+  font-weight: bold;
+border-radius: 5px;
+
+}
+.button3:hover {background-color: #44C8F5}
+.button4 {
+  background-color: #F5F5F5;
+  width: 100px;
+height: 39px;
+  border: 1px solid black;
+  padding: 10px 0;
+  text-align: top;
+  color: black;
+  font-weight: bold;
+border-radius: 5px;
+
+}
+.button4:hover {background-color: #44C8F5}
+.fix {
+  position:absolute;
+  height: 0px;
+  background: #00A4E7;
+  color: #FFF;
+  width: 1900px;
+  top: 0px;
+  left: 0;
+transform: translateZ(0);
+-moz-transform: translatez(0);
+-ms-transform: translatez(0);
+-o-transform: translatez(0);
+-webkit-transform: translateZ(0);
+-webkit-font-smoothing: antialiased;
+z-index: 999;
+}
+.fixed-header {
+  position: fixed;
+  top:0; left:0;
+}
+.fixed-header1 {
+  position: fixed;
+  top:0; left:0;
+}
+.scrollable {
+  margin: 0px auto;
+  width: 1300px;
+}
+.bu20 {
+    border: 1px solid grey;
+    background-color: #f6f6f6;
+    width: 75px;
+    height: 85px;
+    position: relative;    
+    color: #75787B;
+    font-size: 12px;
+    text-align: center; 
+    line-height: 100%; 
+     display: block; 
+}
+.bu20:hover {background-color: #c7c7c7}
+
+.bu20:active {
+  background-color: #c7c7c7;
+  
+  transform: translateY(8px);
+}
+.btn1{
+		margin-bottom: 0;
+		
+		min-height: 60px;
+		margin-top: 0;
+		padding: 20px .5em 0;
+		width: 110px;
+		
+		background: rgba(0, 0, 0,.3) url(https://rawgit.com/tttp/iw-fr/master/img/reset.svg) center 7% no-repeat;
+	}
+	
+	.btn1:hover{
+		background: rgba(0, 0, 0,.4) url(https://rawgit.com/tttp/iw-fr/master/img/reset.svg) center 7% no-repeat;
+	}
+.fond{background-color: white;position:absolute;padding-top:400px;top:0;left:0; right:0;bottom:0;z-index:1999;  width: 100%;
+  height: 500%;}
+
+.contener_general
+{
+  -webkit-animation:animball_two 1s infinite;
+  -moz-animation:animball_two 1s infinite;
+  -ms-animation:animball_two 1s infinite;
+  animation:animball_two 1s infinite;
+  width:44px; height:44px;
+}
+.contener_mixte
+{
+  width:44px; height:44px; position:absolute;
+}
+.ballcolor
+{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.ball_1, .ball_2, .ball_3, .ball_4
+{
+  position: absolute;
+  -webkit-animation:animball_one 1s infinite ease;
+  -moz-animation:animball_one 1s infinite ease;
+  -ms-animation:animball_one 1s infinite ease;
+  animation:animball_one 1s infinite ease;
+}
+.ball_1
+{
+  background-color:#44C8F5;
+  top:0; left:0;
+}
+.ball_2
+{
+  background-color:#F68928;
+  top:0; left:24px;
+}
+.ball_3
+{
+  background-color:#85C441;
+  top:24px; left:0;
+}
+.ball_4
+{
+  background-color:#FFCD00;
+  top:24px; left:24px;
+}
+
+@-webkit-keyframes animball_one
+{
+  0%{ position: absolute;}
+  50%{top:12px; left:12px; position: absolute;opacity:0.5;}
+  100%{ position: absolute;}
+}
+@-moz-keyframes animball_one
+{
+  0%{ position: absolute;}
+  50%{top:12px; left:12px; position: absolute;opacity:0.5;}
+  100%{ position: absolute;}
+}
+@-ms-keyframes animball_one
+{
+  0%{ position: absolute;}
+  50%{top:12px; left:12px; position: absolute;opacity:0.5;}
+  100%{ position: absolute;}
+}
+@keyframes animball_one
+{
+  0%{ position: absolute;}
+  50%{top:12px; left:12px; position: absolute;opacity:0.5;}
+  100%{ position: absolute;}
+}
+
+@-webkit-keyframes animball_two
+{
+  0%{-webkit-transform:rotate(0deg) scale(1);}
+  50%{-webkit-transform:rotate(360deg) scale(1.3);}
+  100%{-webkit-transform:rotate(720deg) scale(1);}
+}
+@-moz-keyframes animball_two
+{
+  0%{-moz-transform:rotate(0deg) scale(1);}
+  50%{-moz-transform:rotate(360deg) scale(1.3);}
+  100%{-moz-transform:rotate(720deg) scale(1);}
+}
+@-ms-keyframes animball_two
+{
+  0%{-ms-transform:rotate(0deg) scale(1);}
+  50%{-ms-transform:rotate(360deg) scale(1.3);}
+  100%{-ms-transform:rotate(720deg) scale(1);}
+}
+@keyframes animball_two
+{
+  0%{transform:rotate(0deg) scale(1);}
+  50%{transform:rotate(360deg) scale(1.3);}
+  100%{transform:rotate(720deg) scale(1);}
+}
+
+}
+
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:220px;
+overflow:visible;
+}
+
+
+
+.main-menu {
+background:	#F5F5F5;
+border-top:1px solid #000000	;
+border-right:1px solid #000000	;
+border-bottom:1px solid #000000	;
+position:absolute;
+top:300px;
+bottom:0;
+height:187px;
+left:0;
+width:50px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:10;
+}
+
+.main-menu>ul {
+margin:0px 0;
+position:absolute;
+}
+
+.main-menu>ul li ul{
+display:none;
+position: absolute;
+margin:7px 0;
+background:black;
+
+    list-style-type:none;
+    width:220px;
+    padding:0px;
+    margin-top:-38px;
+    margin-left:220px;
+    color:#999;
+}
+
+
+.main-menu li {
+position:relative;
+display:block;
+width:220px;
+}
+
+.main-menu li:hover ul {
+display:block;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#000;
+background:#F5F5F5;
+border:1px solid #000000;
+
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#44C8F5;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  
+  font-style: normal;
+  font-weight: 300;
+  
+}
+    
+h3 {
+   font-size: large;
+}
+#p1 {
+   font-size: xx-large;
+}
+#p2 {
+   font-size: small;
+}
+.caret {
+  position: relative;
+  cursor: pointer;
+}
+.caret:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.caret:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.caret:hover:before {
+  border-top-color: #222;
+}
+
+
+.container1 ul { 
+  position: absolute;
+  top: 54px;
+  left: 525px; 
+  width:220px;
+  padding: 0px 0px;
+background:	#F5F5F5;
+border-right:1px solid #000000	;
+border-bottom:1px solid #000000	;
+  display: none;
+
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.container1 ul li { font-size: 0.9em; }
+
+.container1 li:hover ul {
+display:block;
+
+}
+
+.container1 ul li { 
+position:relative;
+
+width:220px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+
+.container1 .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.container1 li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#000;
+background:#F5F5F5;
+border:1px solid #000000;
+font-family: arial;
+width:218px;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.container1 ul li ul {
+display:none;
+position: absolute;
+margin:7px 0;
+background:#F5F5F5;
+
+    list-style-type:none;
+    width:220px;
+    padding:0px;
+    margin-top:-54px;
+    margin-left:-745px;
+    color:#999;
+
+}
+
+.container1 li>a:hover {
+background-color:#44C8F5;
+color: white;  
+}
+
+.container1 {
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+
+
+</style>
+<script>
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	setTimeout(function() {
+    $('.fond').fadeOut('slow');
+}, 3010);
+</script>
+</head>
+<body>
+<div align="center" class="fond"style="width:100%; height:200%;">
+<div id="fort"><img src="https://rawgit.com/ovik-chakraborty/Tutorial/master/Updated_files_ETD/FIA_ETDTRACKER_SM.png"></div>
+  <div class="contener_general">
+      <div class="contener_mixte"><div class="ballcolor ball_1">&nbsp;</div></div>
+      <div class="contener_mixte"><div class="ballcolor ball_2">&nbsp;</div></div>
+      <div class="contener_mixte"><div class="ballcolor ball_3">&nbsp;</div></div>
+      <div class="contener_mixte"><div class="ballcolor ball_4">&nbsp;</div></div>
+  </div>
+  
+  <div style="padding-top:35px;">
+  <div style=" color:#99999; font-weight:300; font-size:30px; font-family:'Arial';padding-top:10px;"><font style="font-weight:400;">Loading..</font></div>
+          </div>
+</div>
+
+<div id="scrollable" class= "scrollable" style="padding-left:0px;">
+<div>
+<div class="navbar-left" style=" vertical-align: top;display:inline-block;padding-left:105px;"><a  href="http://www.fia.org/" style= "border-bottom:none; margin-top:0px;"><img src="https://rawgit.com/ovik-chakraborty/Tutorial/master/Updated_files_ETD/FIA_ETDTRACKER_SM.png" style="max-height:60px;margin-top:0px;"></a></div>
+<div style="display:inline-block; vertical-align: top; padding-left:700px; padding-top:13px; position: relative">
+<div id="654" class="container1">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+<ul class="dropdown-menu multi-level" style="display:none ">
+      <li>
+                     <a href="https://fia.org/categories/exchange-volume">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+
+                </li>
+                 <li>
+                   <a href="https://fia.org/global-overview">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <span class="nav-text">
+                            Global Monthly Overview
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                        <i class="fa fa-area-chart" aria-hidden="true"></i>
+                        <span class="nav-text">
+                            Monthly Trends
+                        </span>
+                    </a>
+                              <ul>
+                <li class="has-subnav">
+                    <a href="https://fia.org/contract-type-dashboard">
+                        <i class="fa"></i>
+                        <span class="nav-text">
+                            Contract Type Dashboard
+                        </span>
+                    </a>
+          
+                </li>
+                <li class="has-subnav">
+                    <a href="https://fia.org/group-dashboard">
+                        <i class="fa"></i>
+                        <span class="nav-text">
+                            Group Dashboard
+                        </span>
+                    </a>
+          
+                </li>
+                <li class="has-subnav">
+                    <a href="https://fia.org/region-dashboard">
+                        <i class="fa"></i>
+                        <span class="nav-text">
+                            Region Dashboard
+                        </span>
+                    </a>
+          
+                </li>
+                
+		</ul>
+                </li>
+                
+                               
+                
+                <li>
+                   <a href="#">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            Monthly Tables
+                        </span>
+                    </a>
+                              <ul>
+                <li class="has-subnav">
+                    <a href="https://fia.org/contract-table">
+                        <i class="fa"></i>
+                        <span class="nav-text">
+                            Contract Table
+                        </span>
+                    </a>
+          
+                </li>
+                <li class="has-subnav">
+                    <a href="https://fia.org/exchange-table">
+                        <i class="fa"></i>
+                        <span class="nav-text">
+                            Exchange Table
+                        </span>
+                    </a>
+          
+                </li>
+                </ul>
+                 </li>
+                
+                <li>
+                    <a href="#">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+</div>
+
+</div>
+</div>
+<h1 style="padding-left:105px;">Global Overview in September</h1>
+<div id="6" style="display:inline-block; padding: 0px;"></div>
+<div id="scrollable" class= "scrollable" style="padding-left:80px;">
+
+<div style="display:inline-block; padding-left: 25px;">
+<!--
+	<button id="one" class="button2">1M</button>
+	<button id="three" class="button2">3M</button>
+	<button id="six" class="button2">6M</button>
+-->
+	<button id="YearTo" class="button3">YTD</button>
+	<button id="oneYear" class="button2">1Y</button>
+	<button id="twoYear" class="button2">2Y</button>
+	<button id="threeYear" class="button2">3Y</button>
+	<button id="fiveYear" class="button2">5Y</button>
+	<button id="tenYear" class="button2">10Y</button>
+	<button id="All" class="button3">All</button>
+	<button id="Custom" class="button4">Custom</button>
+<div style="display:inline-block;  margin-left: 150px;" class="dropdown9"> 
+  
+    <dt>
+    <a href="#/">
+         
+      <p style="font-size:150%;" class="multiSel3"></p>  
+    </a>
+    </dt>
+  
+</div>
+</div>
+
+
+<div>
+
+<div id="hid" style="visibility:hidden; float:left; padding-left: 35px; padding-top: 10px;">
+<div style="display:inline-block;">
+<label style="margin-bottom:0;" for="from">From</label>
+<input type="text" id="from" name="from">
+<label style="margin-bottom:0;" for="to">to</label>
+<input type="text" id="to" name="to">
+
+</div>
+<div style="display:inline-block; padding-left: 10px;">
+<button style="{background-color: #f6f6f6;border: 1px solid black;}" id="perform">Perform</button>
+</div>
+</div>
+
+<div style="float:left; padding-left: 10px; width: 1300px; padding-top: 10px;">
+<div style="display:inline-block; vertical-align: top; padding-left: 15px;" class="dropdown"> 
+  
+    <dt>
+    <a href="#/">
+      <span class="caret">Select Parent</span>  
+      <p class="multiSel"></p>  
+    </a>
+    </dt>
+  
+    <dd>
+        <div id="meniselect"></div>
+    </dd>
+</div>
+<div style="display:inline-block; position:absolute; padding-left: 10px;">
+<button id="perform1" style="{background-color: #f6f6f6;border: 1px solid black;}">Apply</button>
+</div>
+<div style="display:inline-block; vertical-align: top; margin-left: 120px;" class="dropdown1"> 
+  
+    <dt>
+    <a href="#/">
+      <span class="caret">Select Exchange</span>    
+      <p class="multiSel1"></p>  
+    </a>
+    </dt>
+  
+    <dd>
+        <div id="menu1select"></div>
+    </dd>
+</div>
+<div style="display:inline-block; position:absolute; padding-left: 10px;">
+<button id="perform10" style="{background-color: #f6f6f6;border: 1px solid black;}">Apply</button>
+</div>
+<div id = "123">
+<div class="clearfix" style="padding-top: 10px"></div>
+<div style="float: left; width:1400px;">
+<div class="col-md-3 chart_box" style="float: left; width:1100px; ">
+		<h4 id="header2">Volume and Open Interest by Month-Year</h4>
+		<div class="info_chart" >
+			<span class="info">info</span>
+			<p class="desc" style="display: none;">The area chart below shows the Volume/Open Interest distribution by Month-Year. CLick on the chart to select the time range for the data filter. After selecting the time range filter, you can click on the reset link below to remove the filters from the chart. You can also click on the Reset All button in the header to reset all changes in the dashboard.</p>
+		</div>
+  <div id="monthly-move-chart"></div>
+</div>
+<div style="float: left; position:relative;padding-left:40px;padding-top:50px;">
+    <button class="bu20" id="render1"><img src="https://rawgit.com/ovik-chakraborty/Tutorial/master/reset.svg"><br><br>Reset All</br></br></button>
+    <!--<div style="width:8px; height:8px; margin: 8px;display:inline-block;"></div>
+    <button class="bu20" onclick="exportToData();"><img src="https://fia.org/sites/default/files/SEFTic_insert_chart_black_24dp_2x.png">Download CSV</button>
+    <div style="width:8px; height:8px; margin: 8px;display:inline-block;"></div>
+    <button class="bu20" onclick="exportCrossTab();"><img src="https://fia.org/sites/default/files/SEFTic_pie_chart_black_24dp_2x.png">Download Excel</button>
+     <div style="width:8px; height:8px; margin: 8px;display:inline-block;"></div>
+    <button class="bu20" onclick="exportToPDF();"><img src="https://fia.org/sites/default/files/SEFTic_insert_drive_file_black_24dp_2x.png">Download PDF</button>	
+      <div style="width:8px; height:8px; margin: 8px;display:inline-block;"></div>
+    <button class="bu20" onclick="exportImage();"><img src="https://fia.org/sites/default/files/SEFTic_insert_photo_black_24dp_2x.png">Download SVG</button> -->
+</div>
+</div>
+<div style="float: left; margin-left:auto; margin-right:auto; width: 1100px; padding-top: 10px">	
+<div class="col-md-3 chart_box" style="width:500px; height:250px; padding-left: 100px; padding-top: 0px">
+		<h4 id="header6">Volume by Instrument Type</h4>
+		<div class="info_chart" >
+			<span class="info">info</span>
+			<p class="desc" style="display: none;">The row chart below shows the Volume/Open Interest distribution by Instrument Type. CLick on the chart to select the instrument types to filter the data. After selecting the intrument type filter, you can click on the reset link below to remove the filters from the chart. You can also click on the Reset All button in the header to reset all changes in the dashboard.</p>
+		</div>
+<div id="chart-row-spenders">
+    <div class="reset" style="visibility: hidden;">selected: <span class="filter"></span>
+      <a href="javascript:spenderRowChart.filterAll();dc.redrawAll();">reset</a>
+    </div>
+</div>
+</div>
+
+<div class="col-md-3 chart_box" style="width:500px; height:250px; padding-left: 200px; padding-top: 0px">
+		<h4 id="header6">Volume by Exchange</h4>
+		<div class="info_chart" >
+			<span class="info">info</span>
+			<p class="desc" style="display: none;">The pie chart below shows the Volume/Open Interest distribution by Exchange. CLick on the chart to select the exchanges to filter the data. After selecting the exchange filter, you can click on the reset link below to remove the filters from the chart. You can also click on the Reset All button in the header to reset all changes in the dashboard.</p>
+		</div>
+<div id="chart-ring-year4" style="display: inline-block;padding-left:10px;">
+    <div class="reset" style="visibility: hidden;">selected: <span class="filter"></span>
+      <a href="javascript:yearRingChart4.filterAll();dc.redrawAll();">reset</a>
+    </div>
+</div>
+</div>
+	
+</div>
+<div style="float:left; width: 1100px; padding-top: 150px">
+<div class="col-md-3 chart_box" style="width:1100px; ">
+<h4 id="header2">Volume and Open Interest by Month-Year</h4>
+		<div class="info_chart" >
+			<span class="info">info</span>
+			<p class="desc" style="display: none;">The area chart below shows the Volume/Open Interest distribution by Month-Year. CLick on the chart to select the time range for the data filter. After selecting the time range filter, you can click on the reset link below to remove the filters from the chart. You can also click on the Reset All button in the header to reset all changes in the dashboard.</p>
+		</div>
+  <div  id="monthly-move-chart1"></div>
+</div>
+</div>
+<div style="float: left; margin-left:auto; margin-right:auto; width: 1100px; padding-top: 10px">
+
+<div class="col-md-3 chart_box" style="width:500px; height:250px; padding-left: 100px; padding-top: 0px">
+		<h4 id="header6">OI by Instrument Type</h4>
+		<div class="info_chart" >
+			<span class="info">info</span>
+			<p class="desc" style="display: none;">The row chart below shows the Volume/Open Interest distribution by Instrument Type. CLick on the chart to select the instrument types to filter the data. After selecting the intrument type filter, you can click on the reset link below to remove the filters from the chart. You can also click on the Reset All button in the header to reset all changes in the dashboard.</p>
+		</div>
+<div id="chart-row-spenders1">
+    <div class="reset" style="visibility: hidden;">selected: <span class="filter"></span>
+      <a href="javascript:spenderRowChart1.filterAll();dc.redrawAll();">reset</a>
+    </div>
+</div>
+</div>
+
+<div class="col-md-3 chart_box"  style="width:500px; height:270px; padding-left: 200px">
+		<h4 id="header7">OI by Exchange</h4>
+		<div class="info_chart" >
+			<span class="info">info</span>
+			<p class="desc" style="display: none;">The pie chart below shows the Volume/Open Interest distribution by Exchange. CLick on the chart to select the exchanges to filter the data. After selecting the exchange filter, you can click on the reset link below to remove the filters from the chart. You can also click on the Reset All button in the header to reset all changes in the dashboard.</p>
+		</div>
+  <div id="chart-ring-year3">
+    <div class="reset" style="visibility: hidden;">selected: <span class="filter"></span>
+      <a href="javascript:yearRingChart3.filterAll();dc.redrawAll();">reset</a>
+    </div>
+</div>
+</div>
+  </div>
+<div style="float:left; width: 1100px; padding-top: 150px">
+<div class="col-md-3 chart_box" style="width:1100px; ">
+<h4 id="header2">Volume and Open Interest by Month-Year</h4>
+		<div class="info_chart" >
+			<span class="info">info</span>
+			<p class="desc" style="display: none;">The area chart below shows the Volume/Open Interest distribution by Month-Year. CLick on the chart to select the time range for the data filter. After selecting the time range filter, you can click on the reset link below to remove the filters from the chart. You can also click on the Reset All button in the header to reset all changes in the dashboard.</p>
+		</div>
+  <div id="chart-hist-spend">
+    <div class="reset" style="visibility: hidden;">range: <span class="filter"></span>
+      <a href="javascript:spendHistChart.filterAll();dc.redrawAll();">reset</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="clearfix"></div>
+  </div>
+<div class="clearfix"></div>
+<div style="display:inline-block; padding: 10px;">
+
+</div>
+<div class="clearfix"></div>
+        
+    </div>
+<div class="clearfix"></div>
+
+
+
+<div class="clearfix"></div>
+  
+<div class="clearfix"></div>
+  <!-- not sure why all these styles necessary, not the point of this -->
+    <div class="row">
+    <div class="col-xs-12">
+<div style="clear: both; margin: 25px; float:left; padding-top:60px;">
+      
+
+    </div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="https://rawgit.com/dc-js/dc.js/master/web/js/d3.js"></script>
+<script type="text/javascript" src="https://rawgit.com/dc-js/dc.js/master/web/js/crossfilter.js"></script>
+<script type="text/javascript" src="https://rawgit.com/dc-js/dc.js/develop/dc.js"></script>
+<script type="text/javascript" src="https://rawgit.com/dc-js/dc.js/master/web/js/FileSaver.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.0/css/jquery.dataTables.min.css"/>
+<script src="https://cdn.datatables.net/1.10.0/js/jquery.dataTables.min.js"></script>
+<script src="https://rawgit.com/KidSysco/jquery-ui-month-picker/master/src/MonthPicker.js"></script>
+<script type="text/javascript">
+$(window).scroll(function(){
+    if ($(window).scrollTop() >= 0) {
+       $('.fix').addClass('fixed-header');
+	$('.main-menu').css({top: '0px', position:'fixed'});
+    }
+    else {
+       $('.fix').removeClass('fixed-header');
+	$('.main-menu').css({top: '0px', position:'absolute'});
+    }
+});
+jQuery(document).ready(function(){
+    jQuery('#Custom').on('click', function(event) {        
+         if ( $('#hid').css('visibility') == 'hidden' )
+    $('#hid').css('visibility','visible');
+  else
+    $('#hid').css('visibility','hidden');
+    });
+});
+function remove_empty_bins(source_group) {
+    return {
+        all:function () {
+            return source_group.all().filter(function(d) {
+                return d.value != 0;
+            });
+        }
+    };
+}
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+$('.info').click(function(ev) {
+	ev.preventDefault();
+	if($(this).hasClass('opened')){
+		$(this).removeClass('opened');
+		$(this).parents('.info_chart').find('p.desc').slideUp('fast')
+	}else{
+		closeAllInfos();
+		$(this).addClass('opened');
+		$(this).parents('.info_chart').find('p.desc').slideDown('fast')
+	}
+});
+
+function closeAllInfos() {
+	$('.info').removeClass('opened');
+	$('p.desc').slideUp('fast');
+}
+var ndx;
+var allDim;
+var timeFormat1 = d3.time.format('%m/%d/%Y');
+var timeFormat = d3.time.format('%Y-%m');
+var spendHistChart  = dc.barChart("#chart-hist-spend"),
+    spenderRowChart = dc.pieChart("#chart-row-spenders");
+var spenderRowChart1 = dc.pieChart("#chart-row-spenders1");
+var moveChart = dc.lineChart("#monthly-move-chart");
+var moveChart1 = dc.lineChart("#monthly-move-chart1");
+var yearRingChart3 = dc.pieChart("#chart-ring-year3");
+var yearRingChart4 = dc.pieChart("#chart-ring-year4");
+var selectField = dc.selectMenu('#menuselect');
+var selectField1 = dc.selectMenu('#menu2select');
+var arange = "";
+
+var projection = d3.geo.mercator()
+    .center([0, 49])
+    .scale(117)
+    .rotate([-12,0]);
+  $( function() {
+    var dateFormat = "mm/01/yy",
+      from = $( "#from" )
+        .MonthPicker({
+          defaultDate: "-2m",
+          changeMonth: true,
+          numberOfMonths: 1,
+	  changeYear: true
+        })
+        .on( "change", function() {
+ 	  
+          to.MonthPicker( "option", "MinMonth", this.value );
+
+        }),
+      to = $( "#to" ).MonthPicker({
+        defaultDate: "-2m",
+        changeMonth: true,
+        numberOfMonths: 1,
+	changeYear: true
+      })
+      .on( "change", function() {
+	
+        from.MonthPicker( "option", "MaxMonth", this.value );
+
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = element.MonthPicker('GetSelectedMonth') + '/01/' + element.MonthPicker('GetSelectedYear');
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+  } );
+$(document).ready(function() {
+$("#654").on("click", function(e){
+  e.preventDefault();
+  
+  if($(this).hasClass("change")) {
+    $(this).removeClass("change");
+    $(this).children("ul").slideUp("fast");
+  } else {
+    $(this).addClass("change");
+    $(this).children("ul").slideDown("fast");
+  }
+});
+
+$(".dropdown dt a").on('click', function() {
+  $(".dropdown dd ul").slideToggle('fast');
+  $(".dropdown dd button").slideToggle('fast');
+});
+
+$(".dropdown dd ul li a").on('click', function() {
+  $(".dropdown dd ul").hide();
+  $(".dropdown dd button").hide();
+});
+
+function getSelectedValue(id) {
+  return $("#" + id).find("dt a span.value").html();
+}
+
+$(document).bind('click', function(e) {
+  var $clicked = $(e.target);
+  if (!$clicked.parents().hasClass("dropdown")) { $(".dropdown dd ul").hide();$(".dropdown dd button").hide();}
+});
+
+$('#meniselect input[type="checkbox"]').on('click', function() {
+
+  var title = $(this).closest('#meniselect').find('input[type="checkbox"]').val(),
+    title = $(this).val() + ",";
+arange = title;
+
+  if ($(this).is(':checked')) {
+    var html = '<span title="' + title + '">' + title + '</span>';
+    $('.multiSel').append(html);
+    $(".hida").hide();
+  } else {
+    $('span[title="' + title + '"]').remove();
+    var ret = $(".hida");
+    $('.dropdown dt a').append(ret);
+
+  }
+});
+
+
+$(".dropdown1 dt a").on('click', function() {
+  $(".dropdown1 dd ul").slideToggle('fast');
+});
+
+$(".dropdown1 dd select option a").on('click', function() {
+  $(".dropdown1 dd ul").hide();
+});
+
+function getSelectedValue(id) {
+  return $("#" + id).find(".dropdown1 dt a span.value").html();
+}
+
+$(document).bind('click', function(e) {
+  var $clicked = $(e.target);
+  if (!$clicked.parents().hasClass("dropdown1")) $(".dropdown1 dd ul").hide();
+});
+});
+d3.csv("https://rawgit.com/ovik-chakraborty/Tutorial/master/Updated_files_ETD/exchangelookup_ETD1.csv", function(error, spendData) {
+spendData.forEach(function(d) {
+    d.Report_Month = +d.Month;
+    d.Report_Year = +d.Year;
+    d.Report_Year_Month = timeFormat.parse(d.Report_Year_Month);
+    d.Volume = +d.Volume;
+    d.Open_Interest = +d.Open_Interest;
+});
+var filteredData = spendData.filter(function (d) {
+    return d.Volume != 0;
+});
+var arrays = d3.map(filteredData, function(d){return d.Parent_Name;}).keys();
+arrays.sort();
+arrays.unshift('ALL');
+
+    var select = d3.select("#meniselect")
+      .append("ul")
+
+    select
+      .on("change", function(d) {
+        var value = d3.select(this).property("value");
+        
+      });
+
+    var inp = select.selectAll("li")
+      .data(arrays)
+      .enter()
+        .append("li");
+        
+
+    inp.append("input")
+	.attr("type", "checkbox")
+	.attr("id", function (d) { return d; })
+	.attr("value", function (d) { return d; });
+
+    inp.append("b")
+	.text(function (d) { return d; });
+ $("#ALL").click(function () {
+     $('#meniselect input:checkbox').not(this).prop('checked', this.checked);
+ });
+
+var arrays1 = d3.map(filteredData, function(d){return d.Exchange_Name;}).keys();
+arrays1.sort();
+arrays1.unshift('Select-All');
+
+    var select = d3.select("#menu1select")
+      .append("ul")
+
+    select
+      .on("change", function(d) {
+        var value = d3.select(this).property("value");
+        
+      });
+
+    var inp = select.selectAll("li")
+      .data(arrays1)
+      .enter()
+        .append("li");
+        
+
+    inp.append("input")
+	.attr("type", "checkbox")
+	.attr("id", function (d) { return d; })
+	.attr("value", function (d) { return d; });
+
+    inp.append("b")
+	.text(function (d) { return d; });
+ $("#Select-All").click(function () {
+     $('#menu1select input:checkbox').not(this).prop('checked', this.checked);
+ });
+$('#menu1select input[type="checkbox"]').on('change', function() {
+if($(this).val()!=="Select-All") {
+   $('input[type="checkbox"]').not(this).prop('checked', false);
+}
+});
+d3.select('#render1')
+    .on('click', function() {
+var tr = "x";
+$('span[id="'+tr+'"]').remove();
+$('input[type=checkbox]').each(function() { this.checked = false; });
+$('input[type="text"]').val('');
+dc.filterAll();
+dc.redrawAll();
+});
+
+    ndx = crossfilter(spendData);
+var yearDim  = ndx.dimension(function(d) {return d.Region;}),
+    spendDim = ndx.dimension(function(d) {return d.Report_Year_Month;}),
+    spendDim1 = ndx.dimension(function(d) {return d.Report_Year_Month;}),
+    nameDim  = ndx.dimension(function(d) {return d.Contract_Type;}),
+    nameDim1  = ndx.dimension(function(d) {return d.Contract_Type;}),
+    parentDim  = ndx.dimension(function(d) {return d.Parent_Name;}),
+    parentDim1  = ndx.dimension(function(d) {return d.Parent_Name;}),
+    exchangeDim  = ndx.dimension(function(d) {return d.Exchange_Name;}),
+    exchangeDim1  = ndx.dimension(function(d) {return d.Exchange_Name;}),
+    exchangeDim2  = ndx.dimension(function(d) {return d.Exchange_Name;}),
+    categoryDim  = ndx.dimension(function(d) {return d.Category_Name;}),
+    groupDim  = ndx.dimension(function(d) {return d.Group_Name;}),
+    categoryDim1  = ndx.dimension(function(d) {return d.Category_Name;}),
+    groupDim1  = ndx.dimension(function(d) {return d.Group_Name;}),
+    categorySum = categoryDim.group().reduceSum(function(d) {return d.Volume;}),
+    groupSum = groupDim.group().reduceSum(function(d) {return d.Volume;}),
+    spendPerYear = yearDim.group().reduceSum(function(d) {return d.Volume;}),
+    spendPerName = nameDim.group().reduceSum(function(d) {return d.Volume;}),
+spendPerName1 = nameDim1.group().reduceSum(function(d) {return d.Open_Interest;}),
+    spendHist    = spendDim.group().reduceSum(function(d) {return d.Volume;}),
+    spendHist1    = spendDim1.group().reduceSum(function(d) {if (d.Contract_Type=='Future') {return d.Volume;}else{return 0;}}),
+spendHist3    = spendDim1.group().reduceSum(function(d) {if (d.Contract_Type=='Option') {return d.Volume;}else{return 0;}}),
+    spendHist2    = spendDim1.group().reduceSum(function(d) {if (d.Contract_Type=='Future') {return d.Open_Interest;}else{return 0;}}),
+spendHist4    = spendDim1.group().reduceSum(function(d) {if (d.Contract_Type=='Option') {return d.Open_Interest;}else{return 0;}}),
+    spendPart    = parentDim.group().reduceSum(function(d) {return d.Volume;}),
+    spendPart1    = parentDim1.group().reduceSum(function(d) {return d.Volume;}),
+    spendExch    = exchangeDim.group().reduceSum(function(d) {return d.Volume;}),
+    spendExch1    = exchangeDim1.group().reduceSum(function(d) {return d.Volume;}),
+    spendExch2    = exchangeDim2.group().reduceSum(function(d) {return d.Open_Interest;}),
+    categorySum1 = categoryDim.group().reduceSum(function(d) {return d.Open_Interest;}),
+    groupSum1 = groupDim.group().reduceSum(function(d) {return d.Open_Interest;}),
+    allDim1 = ndx.dimension(function(d) {return d.Volume;}),
+    eventGroup = allDim1.group().reduceSum(function(d) {return d.Volume;}),
+    allDim = ndx.dimension(function(d) {return d.Volume;});
+
+selectField
+      .dimension(parentDim1)
+      .group(spendPart1)
+      .multiple(true);
+selectField.title(function (d){
+    return d.key;
+})
+var activities=0;
+var count =  dc.dataCount(".dc-data-count")
+    .dimension(eventGroup)
+    .group({value: function() { activities=0; 
+    return eventGroup.all().filter(function(kv) { if (kv.value>0) {				  
+				  activities += +kv.value;
+				} return kv.value>0; }).length;
+} })
+.on("renderlet.all", function(c) {
+			$(".nbaccredited").html(numberWithCommas(activities));
+});
+  selectField1
+      .dimension(exchangeDim1)
+      .group(spendExch1)
+      .multiple(true);
+selectField1.title(function (d){
+    return d.key;
+})
+      
+            var tip = d3.tip()
+                  .attr('class', 'd3-tip')
+                  .offset([-10, 0])
+                  .html(function (d) { return "<span style='color: #f0027f'>" +  d.key + "</span> : "  + d.value; });
+
+            // tooltips for pie chart
+            var pieTip = d3.tip()
+                  .attr('class', 'd3-tip')
+                  .offset([-10, 0])
+                  .html(function (d) { return "<span style='color: #f0027f'>" +  d.data.key + "</span> : "  + d.value; });
+d3.json("https://rawgit.com/ovik-chakraborty/Tutorial/master/countries1.geo.json", function (error, c) {
+
+
+moveChart 
+.renderArea(true)
+    .width(1100)
+    .height(300)
+    .transitionDuration(1000)
+     .yAxisLabel("Volume")
+   .margins({left: 100, top: 10, right: 10, bottom: 30})
+.dimension(spendDim1)
+
+.x(d3.time.scale().domain([new Date(2000,01,01), new Date(2017,12,31)]))
+   .round(d3.time.month.round)
+        .xUnits(d3.time.months)
+
+    
+    .elasticY(true)
+   
+    .renderHorizontalGridLines(true)
+    
+    
+    
+
+        
+        
+.brushOn(false)
+        // Add the base layer of the stack with group. The second parameter specifies a series name for use in the
+        // legend.
+        // The `.valueAccessor` will be used for the base layer
+        .group(spendHist1)
+        .stack(spendHist3)
+
+        .valueAccessor(function (d) {
+            return d.value;
+        });
+     
+moveChart1 
+.renderArea(true)
+    .width(1100)
+    .height(300)
+    .transitionDuration(1000)
+.yAxisLabel("Open Interest")
+   .margins({left: 100, top: 10, right: 10, bottom: 30})
+.dimension(spendDim1)
+
+.x(d3.time.scale().domain([new Date(2000,01,01), new Date(2017,12,31)]))
+   .round(d3.time.month.round)
+        .xUnits(d3.time.months)
+
+    
+    .elasticY(true)
+   
+    .renderHorizontalGridLines(true)
+
+    
+    
+    
+
+        
+        
+.brushOn(false)
+        // Add the base layer of the stack with group. The second parameter specifies a series name for use in the
+        // legend.
+        // The `.valueAccessor` will be used for the base layer
+        .group(spendHist2)
+        .stack(spendHist4)
+
+
+        .valueAccessor(function (d) {
+            return d.value;
+        });
+ 
+
+  spendHistChart
+    .width(1100)
+    .height(80)
+     .centerBar(true)
+        .gap(1)
+	
+        
+  
+    .x(d3.time.scale().domain([new Date(2000,01,01), new Date(2017,12,31)]))
+    
+        .round(d3.time.month.round)
+        .alwaysUseRounding(true)
+        .xUnits(d3.time.months)
+    .on('renderlet', function(chart) {
+    // smooth the rendering through event throttling
+    chart.select('g.y').style('display', 'none');
+})
+        
+        
+    .dimension(spendDim)
+    .group(spendHist)
+
+       
+        
+    .margins({left: 100, top: 10, right: 10, bottom: 30});
+ spendHistChart.yAxis().ticks(0);
+
+spendHistChart.focusCharts = function (chartlist) {
+        if (!arguments.length) {
+            return this._focusCharts;
+        }
+        this._focusCharts = chartlist; // only needed to support the getter above
+        this.on('filtered', function (range_chart) {
+            if (!range_chart.filter()) {
+                dc.events.trigger(function () {
+                    chartlist.forEach(function(focus_chart) {
+                        focus_chart.x().domain(focus_chart.xOriginalDomain());
+                    });
+                });
+            } else chartlist.forEach(function(focus_chart) {
+                if (!rangesEqual(range_chart.filter(), focus_chart.filter())) {
+                    dc.events.trigger(function () {
+                        focus_chart.focus(range_chart.filter());
+                    });
+                }
+            });
+        });
+        return this;
+    };
+    spendHistChart.focusCharts([moveChart,moveChart1]);
+
+function rangesEqual(range1, range2) {
+        if (!range1 && !range2) {
+            return true;
+        }
+        else if (!range1 || !range2) {
+            return false;
+        }
+        else if (range1.length === 0 && range2.length === 0) {
+            return true;
+        }
+        else if (range1[0].valueOf() === range2[0].valueOf() &&
+            range1[1].valueOf() === range2[1].valueOf()) {
+            return true;
+        }
+        return false;
+    }
+
+d3.select('#YearTo')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var xey = spendData.map(function(d) {
+    return d.Report_Year_Month;
+});
+var en = d3.max(d3.values(xey));
+var end1 = new Date(en);
+end1.setDate(end1.getDate() + 2);
+var CurrentDate = new Date(end1);
+CurrentDate.setMonth(0);
+CurrentDate.setDate(1);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(CurrentDate), new Date(end1)));
+
+dc.redrawAll();
+});
+});
+d3.select('#oneYear')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var xey = spendData.map(function(d) {
+    return d.Report_Year_Month;
+});
+var en = d3.max(d3.values(xey));
+var end1 = new Date(en);
+end1.setDate(end1.getDate() + 2);
+var CurrentDate = new Date(end1);
+CurrentDate.setFullYear(CurrentDate.getFullYear() - 1);
+CurrentDate.setDate(CurrentDate.getDate() - 2);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(CurrentDate), new Date(end1)));
+
+dc.redrawAll();
+});
+});
+d3.select('#twoYear')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var xey = spendData.map(function(d) {
+    return d.Report_Year_Month;
+});
+var en = d3.max(d3.values(xey));
+var end1 = new Date(en);
+end1.setDate(end1.getDate() + 2);
+var CurrentDate = new Date(end1);
+CurrentDate.setFullYear(CurrentDate.getFullYear() - 2);
+CurrentDate.setDate(CurrentDate.getDate() - 2);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(CurrentDate), new Date(end1)));
+
+dc.redrawAll();
+});
+});
+d3.select('#threeYear')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var xey = spendData.map(function(d) {
+    return d.Report_Year_Month;
+});
+var en = d3.max(d3.values(xey));
+var end1 = new Date(en);
+end1.setDate(end1.getDate() + 2);
+var CurrentDate = new Date(end1);
+CurrentDate.setFullYear(CurrentDate.getFullYear() - 3);
+CurrentDate.setDate(CurrentDate.getDate() - 2);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(CurrentDate), new Date(end1)));
+
+dc.redrawAll();
+});
+});
+d3.select('#fiveYear')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var xey = spendData.map(function(d) {
+    return d.Report_Year_Month;
+});
+var en = d3.max(d3.values(xey));
+var end1 = new Date(en);
+end1.setDate(end1.getDate() + 2);
+var CurrentDate = new Date(end1);
+CurrentDate.setFullYear(CurrentDate.getFullYear() - 5);
+CurrentDate.setDate(CurrentDate.getDate() - 2);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(CurrentDate), new Date(end1)));
+
+dc.redrawAll();
+});
+});
+d3.select('#tenYear')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var xey = spendData.map(function(d) {
+    return d.Report_Year_Month;
+});
+var en = d3.max(d3.values(xey));
+var end1 = new Date(en);
+end1.setDate(end1.getDate() + 2);
+var CurrentDate = new Date(end1);
+CurrentDate.setFullYear(CurrentDate.getFullYear() - 10);
+CurrentDate.setDate(CurrentDate.getDate() - 2);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(CurrentDate), new Date(end1)));
+
+dc.redrawAll();
+});
+});
+d3.select('#All')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var xey = spendData.map(function(d) {
+    return d.Report_Year_Month;
+});
+var en = d3.max(d3.values(xey));
+var endD = new Date(en);
+endD.setDate(endD.getDate() + 30);
+var CDate = d3.min(d3.values(xey));
+//CDate.setDate(CDate.getDate() - 1);
+var end_date = endD.getDate();
+    var end_month = endD.getMonth() + 1; //Months are zero based
+    var end_year = endD.getFullYear();
+    endD = end_year + "-" + end_month;
+var curr_date = CDate.getDate();
+    var curr_month = CDate.getMonth() + 1; //Months are zero based
+    var curr_year = CDate.getFullYear();
+    CDate = curr_year + "-" + curr_month;
+//spendDim1.filter([new Date((CDate)),new Date((endD))]);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(CDate), new Date(endD)));
+
+dc.redrawAll();
+});
+});
+d3.select('#perform')
+    .on('click', function() {
+$(document).ready(function() {
+spendHistChart.filter(null);
+var st = $("input[name='from']").val();
+var end = $("input[name='to']").val();
+if (st == undefined || end == undefined) {
+//spendHistChart.filter(dc.filters.RangedFilter(null, null));
+}
+var st2 = st.slice(0, 2) + '/01/' + st.slice(2);
+var end2 = end.slice(0, 2) + '/01/' + end.slice(2);
+st2 = new Date(st2);
+end2 = new Date(end2);
+    var end_month = end2.getMonth() + 1; //Months are zero based
+    var end_year = end2.getFullYear();
+    end2 = end_year + "-" + end_month;
+
+    var curr_month = st2.getMonth() + 1; //Months are zero based
+    var curr_year = st2.getFullYear();
+    st2 = curr_year + "-" + curr_month;
+//spendDim1.filter([new Date((st2)),new Date((end2))]);
+        spendHistChart.filter(dc.filters.RangedFilter(new Date(st2), new Date(end2)));
+dc.redrawAll();
+});
+    });
+d3.select('#perform1')
+    .on('click', function() {
+$(document).ready(function() {
+selectField.filter(null);
+var checkedValues = $('#meniselect input:checkbox:checked').map(function() {
+    return this.value;
+}).get();
+
+if (checkedValues === undefined || checkedValues.length == 0) {
+    selectField.filter(['Null']);
+}
+        selectField.filter([checkedValues]);
+selectField.redrawGroup();
+
+dc.redrawAll();
+
+});
+    });
+
+d3.select('#perform10')
+    .on('click', function() {
+$(document).ready(function() {
+selectField1.filter(null);
+var checkedValues = $('#menu1select input:checkbox:checked').map(function() {
+    return this.value;
+}).get();
+
+if (checkedValues === undefined || checkedValues.length == 0) {
+    selectField1.filter(['Null']);
+}
+  var title;
+var tr = "x";
+//arange = title;
+if(checkedValues === undefined || checkedValues.length == 0 || checkedValues.includes("Select-All")) {
+$('span[id="'+tr+'"]').remove();
+var ret = $(".hida");
+$('.dropdown9 dt a').append(ret);
+} else {
+title = checkedValues[0];
+$('span[id="'+tr+'"]').remove();
+var html = '<span id="'+tr+'" title="' + title + '">' + title + '</span>';
+    $('.multiSel3').append(html);
+    $(".hida").hide();
+}
+        selectField1.filter([checkedValues]);
+selectField1.redrawGroup();
+
+dc.redrawAll();
+
+});
+    });
+spenderRowChart
+    .width(350)
+    .height(350)
+    .dimension(groupDim)
+    .minAngleForLabel(.25)
+    .externalRadiusPadding(80)
+    .externalLabels(40)
+    .group(groupSum)
+    .innerRadius(40)
+    .drawPaths(false)
+    .controlsUseVisibility(true);
+
+
+spenderRowChart1
+    .width(350)
+    .height(350)
+    .dimension(categoryDim)
+    .minAngleForLabel(.25)
+    .externalRadiusPadding(80)
+    .externalLabels(40)
+    .group(categorySum)
+    .innerRadius(40)
+    .drawPaths(false)
+    .controlsUseVisibility(true);
+
+
+
+  yearRingChart3
+    .width(350)
+    .height(350)
+    .dimension(groupDim1)
+    .minAngleForLabel(.25)
+    .externalRadiusPadding(80)
+    .externalLabels(40)
+    .group(groupSum1)
+    .innerRadius(40)
+    .drawPaths(false)
+    .controlsUseVisibility(true);
+
+
+  yearRingChart4
+    .width(350)
+    .height(350)
+    .dimension(categoryDim1)
+    .minAngleForLabel(.25)
+    .externalRadiusPadding(80)
+    .externalLabels(40)
+    .group(categorySum1)
+    .innerRadius(40)
+    .drawPaths(false)
+    .controlsUseVisibility(true);
+   
+
+d3.select('#CSV')
+    .on('click', function() {
+        var data = nameDim.top(Infinity);
+        
+            
+        
+        var blob = new Blob([d3.csv.format(data)], {type: "text/csv;charset=utf-8"});
+        saveAs(blob, 'data.csv');
+    });
+
+ d3.select('#CSV2')
+    .on('click', function() {
+        var data = nameDim.top(Infinity);
+        
+            
+        
+        var blob = new Blob([d3.csv.format(data)], {type: "text/csv;charset=utf-8"});
+        saveAs(blob, 'data.xls');
+    });               
+
+  
+
+
+
+dc.renderAll();
+
+
+$(document).ready(function() {
+
+                
+
+
+                d3.selectAll(".pie-slice").call(pieTip);
+                d3.selectAll(".pie-slice").on('mouseover', pieTip.show)
+                    .on('mouseout', pieTip.hide);		
+var changed;
+$('select').change(function(e) {
+    var select = $(this);
+    var list = select.data('prevstate');
+    var val = select.val();
+    if (list == null) {
+        list = val;
+    } else if (val.length == 1) {
+        val = val.pop();
+        var pos = list.indexOf(val);
+        if (pos == -1)
+            list.push(val);
+        else
+            list.splice(pos, 1);
+    } else {
+        list = val;
+    }
+    select.val(list);
+    select.data('prevstate', list);
+    changed = true;
+}).find('option').click(function() {
+    if (!changed){
+        $(this).parent().change();
+    }
+    changed = false;
+});
+});
+});
+ });
+
+</script>
+
+</body>
+</html>
